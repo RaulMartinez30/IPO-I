@@ -1,0 +1,54 @@
+﻿<Window x:Class="BungaloApp.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="LOGIN" Height="520" Width="800" 
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+
+    <Grid Background="White">
+        <!-- Contenedor central -->
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="420">
+
+            <!-- Logo del coco -->
+            <Image Source="/Images/ICONO_BUNGALO.png" Width="110" Height="110" Margin="0,0,0,20" HorizontalAlignment="Center"/>
+
+            <!-- CAMPO USUARIO -->
+            <Label Content="USUARIO" FontFamily="Segoe UI" FontWeight="Bold" FontSize="13" Padding="0,0,0,3"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="txtUsuario" Height="36" VerticalContentAlignment="Center" BorderThickness="2" BorderBrush="Black" Padding="8,0" FontSize="14"/>
+                <TextBlock Grid.Column="1" Text="ⓘ" FontSize="20" VerticalAlignment="Center" Margin="10,0,0,0" ToolTip="Introduce tu nombre de usuario para acceder"/>
+            </Grid>
+            <!-- Mensaje de error de usuario (Oculto por defecto) -->
+            <TextBlock x:Name="lblErrorUsuario" Text="MENSAJE DE ERROR" Foreground="#D32F2F" FontSize="11" Visibility="Collapsed" Margin="0,3,0,10"/>
+
+            <!-- CAMPO PASSWORD -->
+            <Grid Margin="0,10,0,3">
+                <Label Content="PASSWORD" FontFamily="Segoe UI" FontWeight="Bold" FontSize="13" Padding="0"/>
+                <TextBlock Text="¿Contraseña Olvidada?" Foreground="#8A2BE2" Cursor="Hand" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="12"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <PasswordBox x:Name="txtPassword" Height="36" VerticalContentAlignment="Center" BorderThickness="2" BorderBrush="Black" Padding="8,0" FontSize="14"/>
+                <TextBlock Grid.Column="1" Text="ⓘ" FontSize="20" VerticalAlignment="Center" Margin="10,0,0,0" ToolTip="Introduce tu contraseña de acceso"/>
+            </Grid>
+            <!-- Mensaje de error de contraseña (Oculto por defecto) -->
+            <TextBlock x:Name="lblErrorPassword" Text="MENSAJE DE ERROR" Foreground="#D32F2F" FontSize="11" Visibility="Collapsed" Margin="0,3,0,25"/>
+
+            <!-- BOTÓN LOGIN -->
+            <Button x:Name="btnLogin" Content="LOGIN" Width="150" Height="45" Background="#1A73E8" Foreground="White" FontWeight="Bold" FontSize="16" BorderThickness="2" BorderBrush="Black" Click="btnLogin_Click" HorizontalAlignment="Center">
+                <Button.Effect>
+                    <!-- Sombra dura estilo boceto -->
+                    <DropShadowEffect Color="Black" Direction="315" ShadowDepth="4" Opacity="1" BlurRadius="0"/>
+                </Button.Effect>
+            </Button>
+
+        </StackPanel>
+    </Grid>
+</Window>
