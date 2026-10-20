@@ -7,11 +7,11 @@
       "RelativeMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|solutionrelative:bungaloapp\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|c:\\users\\raulm\\onedrive\\documentos\\ingenieria informatica\\3\\primer cuatri\\ipo i\\lab\\ipo-i\\codigo\\bungaloapp\\bungaloapp\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\bungaloapp\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|solutionrelative:bungaloapp\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|c:\\users\\raulm\\onedrive\\documentos\\ingenieria informatica\\3\\primer cuatri\\ipo i\\lab\\ipo-i\\codigo\\bungaloapp\\bungaloapp\\splashwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\bungaloapp\\splashwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|solutionrelative:bungaloapp\\splashwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -48,7 +48,7 @@
               "RelativeDocumentMoniker": "BungaloApp\\LoginWindow.xaml.cs",
               "ToolTip": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\LoginWindow.xaml.cs",
               "RelativeToolTip": "BungaloApp\\LoginWindow.xaml.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAA3wBQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAYwBQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-16T19:50:28.925Z",
               "EditorCaption": ""
@@ -63,8 +63,7 @@
               "RelativeToolTip": "BungaloApp\\SplashWindow.xaml.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAzwBQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-16T19:24:56.675Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-16T19:24:56.675Z"
             },
             {
               "$type": "Document",
@@ -75,8 +74,7 @@
               "ToolTip": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\LoginWindow.xaml",
               "RelativeToolTip": "BungaloApp\\LoginWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-10-16T19:41:19.752Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-16T19:41:19.752Z"
             },
             {
               "$type": "Document",
@@ -87,8 +85,7 @@
               "ToolTip": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\App.xaml",
               "RelativeToolTip": "BungaloApp\\App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-10-16T19:24:01.541Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-16T19:24:01.541Z"
             },
             {
               "$type": "Document",
