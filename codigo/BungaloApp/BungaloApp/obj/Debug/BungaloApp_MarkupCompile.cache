@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\raulm\OneDrive\Documentos\Ingenieria Informatica\3\Primer Cuatri\IPO I\LAB\IPO-I\codigo\BungaloApp\BungaloApp\App.xaml
-3-1114378747
+10-79493871
 
-7-1346889387
+19109920716
 13-1310406943
-LoginWindow.xaml;MainWindow.xaml;SplashWindow.xaml;
+LoginWindow.xaml;MainWindow.xaml;SplashWindow.xaml;Views\DashboardView.xaml;Views\ReservasView.xaml;Views\AlojamientosView.xaml;Views\ActividadesView.xaml;Views\PersonalView.xaml;GraficasWindow.xaml;ConfiguracionWindow.xaml;
 
 False
 

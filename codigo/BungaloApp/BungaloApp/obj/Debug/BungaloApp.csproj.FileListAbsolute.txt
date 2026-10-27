@@ -3,7 +3,6 @@ C:\Users\raulm\OneDrive\Documentos\Ingenieria Informatica\3\Primer Cuatri\IPO I\
 C:\Users\raulm\OneDrive\Documentos\Ingenieria Informatica\3\Primer Cuatri\IPO I\LAB\IPO-I\codigo\BungaloApp\BungaloApp\obj\Debug\MainWindow.g.cs
 C:\Users\raulm\OneDrive\Documentos\Ingenieria Informatica\3\Primer Cuatri\IPO I\LAB\IPO-I\codigo\BungaloApp\BungaloApp\obj\Debug\SplashWindow.g.cs
 C:\Users\raulm\OneDrive\Documentos\Ingenieria Informatica\3\Primer Cuatri\IPO I\LAB\IPO-I\codigo\BungaloApp\BungaloApp\obj\Debug\BungaloApp_MarkupCompile.cache
-C:\Users\raulm\OneDrive\Documentos\Ingenieria Informatica\3\Primer Cuatri\IPO I\LAB\IPO-I\codigo\BungaloApp\BungaloApp\obj\Debug\BungaloApp_MarkupCompile.lref
 C:\Users\raulm\OneDrive\Documentos\Ingenieria Informatica\3\Primer Cuatri\IPO I\LAB\IPO-I\codigo\BungaloApp\BungaloApp\bin\Debug\BungaloApp.exe.config
 C:\Users\raulm\OneDrive\Documentos\Ingenieria Informatica\3\Primer Cuatri\IPO I\LAB\IPO-I\codigo\BungaloApp\BungaloApp\bin\Debug\BungaloApp.exe
 C:\Users\raulm\OneDrive\Documentos\Ingenieria Informatica\3\Primer Cuatri\IPO I\LAB\IPO-I\codigo\BungaloApp\BungaloApp\bin\Debug\BungaloApp.pdb
@@ -17,3 +16,18 @@ C:\Users\raulm\OneDrive\Documentos\Ingenieria Informatica\3\Primer Cuatri\IPO I\
 C:\Users\raulm\OneDrive\Documentos\Ingenieria Informatica\3\Primer Cuatri\IPO I\LAB\IPO-I\codigo\BungaloApp\BungaloApp\obj\Debug\BungaloApp.pdb
 C:\Users\raulm\OneDrive\Documentos\Ingenieria Informatica\3\Primer Cuatri\IPO I\LAB\IPO-I\codigo\BungaloApp\BungaloApp\obj\Debug\LoginWindow.g.cs
 C:\Users\raulm\OneDrive\Documentos\Ingenieria Informatica\3\Primer Cuatri\IPO I\LAB\IPO-I\codigo\BungaloApp\BungaloApp\obj\Debug\LoginWindow.baml
+C:\Users\raulm\OneDrive\Documentos\Ingenieria Informatica\3\Primer Cuatri\IPO I\LAB\IPO-I\codigo\BungaloApp\BungaloApp\obj\Debug\Views\DashboardView.baml
+C:\Users\raulm\OneDrive\Documentos\Ingenieria Informatica\3\Primer Cuatri\IPO I\LAB\IPO-I\codigo\BungaloApp\BungaloApp\obj\Debug\Views\ReservasView.baml
+C:\Users\raulm\OneDrive\Documentos\Ingenieria Informatica\3\Primer Cuatri\IPO I\LAB\IPO-I\codigo\BungaloApp\BungaloApp\obj\Debug\Views\AlojamientosView.baml
+C:\Users\raulm\OneDrive\Documentos\Ingenieria Informatica\3\Primer Cuatri\IPO I\LAB\IPO-I\codigo\BungaloApp\BungaloApp\obj\Debug\Views\ActividadesView.baml
+C:\Users\raulm\OneDrive\Documentos\Ingenieria Informatica\3\Primer Cuatri\IPO I\LAB\IPO-I\codigo\BungaloApp\BungaloApp\obj\Debug\Views\PersonalView.baml
+C:\Users\raulm\OneDrive\Documentos\Ingenieria Informatica\3\Primer Cuatri\IPO I\LAB\IPO-I\codigo\BungaloApp\BungaloApp\obj\Debug\GraficasWindow.baml
+C:\Users\raulm\OneDrive\Documentos\Ingenieria Informatica\3\Primer Cuatri\IPO I\LAB\IPO-I\codigo\BungaloApp\BungaloApp\obj\Debug\ConfiguracionWindow.baml
+C:\Users\raulm\OneDrive\Documentos\Ingenieria Informatica\3\Primer Cuatri\IPO I\LAB\IPO-I\codigo\BungaloApp\BungaloApp\obj\Debug\App.baml
+C:\Users\raulm\OneDrive\Documentos\Ingenieria Informatica\3\Primer Cuatri\IPO I\LAB\IPO-I\codigo\BungaloApp\BungaloApp\obj\Debug\Views\DashboardView.g.cs
+C:\Users\raulm\OneDrive\Documentos\Ingenieria Informatica\3\Primer Cuatri\IPO I\LAB\IPO-I\codigo\BungaloApp\BungaloApp\obj\Debug\Views\ReservasView.g.cs
+C:\Users\raulm\OneDrive\Documentos\Ingenieria Informatica\3\Primer Cuatri\IPO I\LAB\IPO-I\codigo\BungaloApp\BungaloApp\obj\Debug\Views\AlojamientosView.g.cs
+C:\Users\raulm\OneDrive\Documentos\Ingenieria Informatica\3\Primer Cuatri\IPO I\LAB\IPO-I\codigo\BungaloApp\BungaloApp\obj\Debug\Views\ActividadesView.g.cs
+C:\Users\raulm\OneDrive\Documentos\Ingenieria Informatica\3\Primer Cuatri\IPO I\LAB\IPO-I\codigo\BungaloApp\BungaloApp\obj\Debug\Views\PersonalView.g.cs
+C:\Users\raulm\OneDrive\Documentos\Ingenieria Informatica\3\Primer Cuatri\IPO I\LAB\IPO-I\codigo\BungaloApp\BungaloApp\obj\Debug\GraficasWindow.g.cs
+C:\Users\raulm\OneDrive\Documentos\Ingenieria Informatica\3\Primer Cuatri\IPO I\LAB\IPO-I\codigo\BungaloApp\BungaloApp\obj\Debug\ConfiguracionWindow.g.cs

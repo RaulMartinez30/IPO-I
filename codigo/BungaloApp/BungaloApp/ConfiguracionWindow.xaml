@@ -1,0 +1,132 @@
+<Window x:Class="BungaloApp.ConfiguracionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="CONFIGURACIÓN" Height="560" Width="780" WindowStartupLocation="CenterOwner" ResizeMode="CanResizeWithGrip"
+        Background="{DynamicResource AppBg}" Foreground="{DynamicResource TextBrush}">
+    <DockPanel Margin="8">
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Aceptar" Style="{StaticResource BtnAzul}" Click="Aceptar_Click"/>
+            <Button Content="Cancelar" Style="{StaticResource BtnRojo}" Click="Cancelar_Click"/>
+            <Button Content="Aplicar" Style="{StaticResource BtnGris}" Click="Aplicar_Click"/>
+        </StackPanel>
+
+        <TabControl x:Name="tabs" TabStripPlacement="Left" Background="{DynamicResource PanelBg}" BorderBrush="{DynamicResource LineBrush}" BorderThickness="2">
+
+            <!-- GENERAL -->
+            <TabItem Header="General">
+                <ScrollViewer><StackPanel Margin="16">
+                    <TextBlock Text="Información del Complejo" Style="{StaticResource H2}"/>
+                    <TextBlock Text="Nombre del complejo: Bungalo S.L." Margin="0,3"/>
+                    <TextBlock Text="CIF/NIF: B80192727" Margin="0,3"/>
+                    <TextBlock Text="Dirección física: C/ Ave del paraíso, Nº 7." Margin="0,3"/>
+                    <TextBlock Text="Cuenta" Style="{StaticResource H2}" Margin="0,18,0,4"/>
+                    <TextBlock x:Name="lblUsuario" Margin="0,3"/>
+                    <TextBlock x:Name="lblEmail" Margin="0,3"/>
+                    <StackPanel Orientation="Horizontal" Margin="0,8">
+                        <TextBlock Text="Seguridad:" VerticalAlignment="Center"/>
+                        <Button Content="🔒 Cambiar contraseña" Style="{StaticResource BtnGris}" Click="CambiarPass_Click"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Cerrar sesión automáticamente en:" VerticalAlignment="Center"/>
+                        <ComboBox x:Name="cmbCierre" Width="100" Margin="8,0,0,0"/>
+                    </StackPanel>
+                </StackPanel></ScrollViewer>
+            </TabItem>
+
+            <!-- ASPECTO -->
+            <TabItem Header="Aspecto">
+                <StackPanel Margin="16">
+                    <TextBlock Text="Tema de la Interfaz" Style="{StaticResource H2}"/>
+                    <TextBlock Text="Modo de color:" Margin="0,6"/>
+                    <RadioButton x:Name="rbClaro" Content="Modo Claro" GroupName="tema" Margin="0,4"/>
+                    <RadioButton x:Name="rbOscuro" Content="Modo Oscuro" GroupName="tema" Margin="0,4"/>
+                    <RadioButton x:Name="rbSistema" Content="Sincronizar con el Sistema" GroupName="tema" Margin="0,4"/>
+                </StackPanel>
+            </TabItem>
+
+            <!-- ACCESIBILIDAD -->
+            <TabItem Header="Accesibilidad">
+                <ScrollViewer><StackPanel Margin="16">
+                    <TextBlock Text="Ajustes Visuales" Style="{StaticResource H2}"/>
+                    <TextBlock Text="Tamaño de texto:" Margin="0,8,0,2"/>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="A" FontSize="11" VerticalAlignment="Center"/>
+                        <Slider x:Name="sldTexto" Minimum="11" Maximum="18" Width="220" Margin="8,0" TickFrequency="1" IsSnapToTickEnabled="True" TickPlacement="BottomRight"/>
+                        <TextBlock Text="A" FontSize="20" VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
+                        <TextBlock Text="Modo daltónico:" VerticalAlignment="Center"/>
+                        <ComboBox x:Name="cmbDaltonico" Width="150" Margin="8,0,0,0"/>
+                    </StackPanel>
+                    <CheckBox x:Name="chkContraste" Content="Forzar modo de alto contraste" Margin="0,12,0,0"/>
+                    <TextBlock Text="Comprensión y Motricidad" Style="{StaticResource H2}" Margin="0,20,0,4"/>
+                    <CheckBox x:Name="chkAnimaciones" Content="Reducir animaciones y transiciones"/>
+                    <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
+                        <TextBlock Text="Atajos de teclado:" VerticalAlignment="Center"/>
+                        <Button Content="⌨ Configurar atajos" Style="{StaticResource BtnGris}" Click="Atajos_Click"/>
+                    </StackPanel>
+                </StackPanel></ScrollViewer>
+            </TabItem>
+
+            <!-- PREFERENCIAS -->
+            <TabItem Header="Preferencias">
+                <ScrollViewer><StackPanel Margin="16">
+                    <TextBlock Text="Zona Horaria y Calendario" Style="{StaticResource H2}"/>
+                    <StackPanel Orientation="Horizontal" Margin="0,4"><TextBlock Text="Huso horario:" Width="160" VerticalAlignment="Center"/><ComboBox x:Name="cmbHuso" Width="200"/></StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,4"><TextBlock Text="Formato de calendario:" Width="160" VerticalAlignment="Center"/><ComboBox x:Name="cmbCal" Width="200"/></StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,4"><TextBlock Text="Formato de hora:" Width="160" VerticalAlignment="Center"/><ComboBox x:Name="cmbHora" Width="200"/></StackPanel>
+                    <TextBlock Text="Moneda y Unidades" Style="{StaticResource H2}" Margin="0,20,0,4"/>
+                    <StackPanel Orientation="Horizontal" Margin="0,4"><TextBlock Text="Moneda del sistema:" Width="160" VerticalAlignment="Center"/><ComboBox x:Name="cmbMoneda" Width="200"/></StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,4"><TextBlock Text="Sistema de medidas:" Width="160" VerticalAlignment="Center"/><ComboBox x:Name="cmbMedidas" Width="200"/></StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,4"><TextBlock Text="Separador decimal:" Width="160" VerticalAlignment="Center"/><ComboBox x:Name="cmbDecimal" Width="200"/></StackPanel>
+                </StackPanel></ScrollViewer>
+            </TabItem>
+
+            <!-- NOTIFICACIONES -->
+            <TabItem Header="Notificaciones">
+                <ScrollViewer><StackPanel Margin="16">
+                    <TextBlock Text="Eventos del Sistema" Style="{StaticResource H2}"/>
+                    <CheckBox x:Name="chkNReservas" Content="Nuevas reservas online" Margin="0,3"/>
+                    <CheckBox x:Name="chkNCancel" Content="Cancelación de clientes" Margin="0,3"/>
+                    <CheckBox x:Name="chkNMant" Content="Alertas urgentes de mantenimiento" Margin="0,3"/>
+                    <CheckBox x:Name="chkNLimp" Content="Cambio de estado de limpieza" Margin="0,3"/>
+                    <CheckBox x:Name="chkNCheck" Content="Check-ins pendientes" Margin="0,3"/>
+                    <CheckBox x:Name="chkNAct" Content="Actividades sin monitor" Margin="0,3"/>
+                    <TextBlock Text="Canales y Sonidos" Style="{StaticResource H2}" Margin="0,18,0,4"/>
+                    <CheckBox x:Name="chkNEmerg" Content="Notificaciones emergentes" Margin="0,3"/>
+                    <CheckBox x:Name="chkNSonido" Content="Activar sonido (para notificaciones importantes)" Margin="0,3"/>
+                    <StackPanel Orientation="Horizontal" Margin="0,6">
+                        <TextBlock Text="Sonido:" VerticalAlignment="Center"/>
+                        <ComboBox x:Name="cmbSonido" Width="120" Margin="8,0"/>
+                        <Button Content="🔊 Probar notificaciones" Style="{StaticResource BtnGris}" Click="Probar_Click"/>
+                    </StackPanel>
+                    <TextBlock Text="Modo Silencio" Style="{StaticResource H2}" Margin="0,18,0,4"/>
+                    <CheckBox x:Name="chkSilencio" Content="Activar modo silencio"/>
+                </StackPanel></ScrollViewer>
+            </TabItem>
+
+            <!-- SOBRE NOSOTROS -->
+            <TabItem Header="Sobre Nosotros">
+                <ScrollViewer><StackPanel Margin="16">
+                    <TextBlock Text="Identidad del Software" Style="{StaticResource H2}"/>
+                    <TextBlock Text="Nombre del programa: Bungalo APP" Margin="0,3"/>
+                    <TextBlock Text="Versión y licencia: V0.2.0-ALPHA, Licencia corporativa" Margin="0,3"/>
+                    <TextBlock Text="Equipo de Desarrollo" Style="{StaticResource H2}" Margin="0,16,0,4"/>
+                    <TextBlock Text="Créditos: Raúl Martínez, Silviu-Daniel Zamfir" Margin="0,3"/>
+                    <TextBlock Text="Contexto: Proyecto de la asignatura Interacción Persona-Ordenador (IPO). Escuela Superior de Informática - UCLM" TextWrapping="Wrap" Margin="0,3"/>
+                    <TextBlock Text="Ayuda y Documentación" Style="{StaticResource H2}" Margin="0,16,0,4"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="📖 Descargar documentación del proyecto" Style="{StaticResource BtnGris}" Click="Docs_Click"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="📞 Contactar con soporte técnico" Style="{StaticResource BtnGris}" Click="Soporte_Click"/>
+                    </StackPanel>
+                    <TextBlock Text="Aspectos Legales" Style="{StaticResource H2}" Margin="0,16,0,4"/>
+                    <TextBlock Margin="0,3"><Hyperlink Click="Terminos_Click">Términos del servicio de software</Hyperlink></TextBlock>
+                    <TextBlock Margin="0,3"><Hyperlink Click="Privacidad_Click">Política de privacidad</Hyperlink></TextBlock>
+                    <CheckBox Content="El sistema está actualizado a la última versión: V0.2.0-ALPHA" IsChecked="True" IsEnabled="False" Margin="0,14,0,0"/>
+                </StackPanel></ScrollViewer>
+            </TabItem>
+        </TabControl>
+    </DockPanel>
+</Window>

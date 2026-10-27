@@ -1,0 +1,176 @@
+<UserControl x:Class="BungaloApp.ReservasView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Margin="6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.1*"/>
+            <ColumnDefinition Width="1*" MinWidth="400"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- LISTA -->
+        <Border Grid.Column="0" Style="{StaticResource Card}">
+            <DockPanel>
+                <TextBlock DockPanel.Dock="Top" Text="GESTIÓN DE RESERVAS" Style="{StaticResource H2}"/>
+                <Grid DockPanel.Dock="Top" Margin="0,6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox x:Name="txtBuscar" Height="28" VerticalContentAlignment="Center" ToolTip="Buscar por cliente o ID" TextChanged="Filtro_Changed"/>
+                    <ComboBox x:Name="cmbFiltroEstado" Grid.Column="1" Width="130" Margin="6,0,0,0" SelectionChanged="Filtro_Changed"/>
+                </Grid>
+                <DockPanel DockPanel.Dock="Bottom" Margin="0,6,0,0">
+                    <TextBlock x:Name="lblTotal" DockPanel.Dock="Left" VerticalAlignment="Center"/>
+                    <Button Content="AÑADIR NUEVO CLIENTE" Style="{StaticResource BtnAzul}" HorizontalAlignment="Right" Click="Nuevo_Click"/>
+                </DockPanel>
+                <DataGrid x:Name="dgReservas" SelectionChanged="dgReservas_SelectionChanged">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="Auto"/>
+                        <DataGridTextColumn Header="CLIENTE" Binding="{Binding Cliente}" Width="*"/>
+                        <DataGridTextColumn Header="ALOJ." Binding="{Binding Alojamiento}" Width="Auto"/>
+                        <DataGridTemplateColumn Header="ESTADO" Width="Auto">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Margin="4,2">
+                                        <TextBlock Text="{Binding Estado}"/>
+                                        <TextBlock Text="{Binding Aviso}" Foreground="#D32F2F" FontSize="10"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </DockPanel>
+        </Border>
+
+        <!-- DETALLE -->
+        <Border Grid.Column="1" Style="{StaticResource Card}">
+            <DockPanel>
+                <TextBlock DockPanel.Dock="Top" Text="NUEVA / DETALLES DE RESERVA" Style="{StaticResource H2}"/>
+                <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button Content="GUARDAR" Style="{StaticResource BtnAzul}" Click="Guardar_Click"/>
+                    <Button Content="ELIMINAR" Style="{StaticResource BtnRojo}" ToolTip="Eliminar del listado" Click="Eliminar_Click"/>
+                    <Button Content="CANCELAR" Style="{StaticResource BtnGris}" Click="Cancelar_Click"/>
+                </StackPanel>
+
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel Margin="0,0,6,0">
+
+                        <GroupBox Header="👤 CLIENTE" Margin="0,0,0,8" Padding="6">
+                            <StackPanel>
+                                <TextBlock Text="Nombre:" Style="{StaticResource Lbl}" Margin="0,0,0,2"/>
+                                <TextBox x:Name="txtNombre"/>
+                                <TextBlock Text="DNI:" Style="{StaticResource Lbl}"/>
+                                <TextBox x:Name="txtDni" MaxLength="9"/>
+                                <TextBlock Text="Teléfono:" Style="{StaticResource Lbl}"/>
+                                <TextBox x:Name="txtTelefono" MaxLength="9"/>
+                                <TextBlock Text="E-mail:" Style="{StaticResource Lbl}"/>
+                                <TextBox x:Name="txtEmail"/>
+                                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                                    <CheckBox x:Name="chkVehiculo" Content="Vehículo" VerticalAlignment="Center" Checked="chkVehiculo_Changed" Unchecked="chkVehiculo_Changed"/>
+                                    <TextBlock Text="Matrícula:" Style="{StaticResource Lbl}" Margin="16,0,6,0" VerticalAlignment="Center"/>
+                                    <TextBox x:Name="txtMatricula" Width="110"/>
+                                    <CheckBox x:Name="chkMascota" Content="Mascota" Margin="16,0,0,0" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header="🏠 ALOJAMIENTO" Margin="0,0,0,8" Padding="6">
+                            <StackPanel>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="140"/>
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel>
+                                        <TextBlock Text="Alojamiento:" Style="{StaticResource Lbl}" Margin="0,0,0,2"/>
+                                        <ComboBox x:Name="cmbAloj" Width="150" HorizontalAlignment="Left" SelectionChanged="cmbAloj_SelectionChanged"/>
+                                        <TextBlock Text="Equipamiento:" Style="{StaticResource Lbl}"/>
+                                        <TextBlock x:Name="lblEquip" TextWrapping="Wrap"/>
+                                        <TextBlock x:Name="lblEstadoAloj" Margin="0,8,0,0"/>
+                                        <TextBlock x:Name="lblLimpioAloj"/>
+                                    </StackPanel>
+                                    <Border Grid.Column="1" BorderBrush="Black" BorderThickness="1" Height="95" VerticalAlignment="Top" Background="#DDDDDD">
+                                        <Image x:Name="imgAloj" Stretch="UniformToFill"/>
+                                    </Border>
+                                </Grid>
+                                <TextBlock Text="Notas (INTERNAS) del alojamiento:" Style="{StaticResource Lbl}"/>
+                                <TextBox x:Name="txtNotasAloj" Height="50" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"/>
+                                <Button Content="IR AL ALOJAMIENTO" Style="{StaticResource BtnAzul}" HorizontalAlignment="Right" Click="IrAloj_Click"/>
+                            </StackPanel>
+                        </GroupBox>
+
+                        <GroupBox Header="DETALLES DE LA RESERVA" Margin="0,0,0,8" Padding="6">
+                            <StackPanel>
+                                <TextBlock Text="Ocupantes:" Style="{StaticResource Lbl}" Margin="0,0,0,2"/>
+                                <Button x:Name="btnOcupantes" HorizontalAlignment="Left" Padding="10,3" Click="btnOcupantes_Click"/>
+                                <Popup x:Name="popOcup" PlacementTarget="{Binding ElementName=btnOcupantes}" Placement="Bottom" StaysOpen="False" AllowsTransparency="True">
+                                    <Border Background="White" BorderBrush="Black" BorderThickness="2" Padding="10">
+                                        <StackPanel>
+                                            <StackPanel Orientation="Horizontal" Margin="0,2">
+                                                <TextBlock Text="Adultos:" Width="70" Foreground="Black" VerticalAlignment="Center"/>
+                                                <Button Content="−" Tag="A-" Width="26" Click="Ocup_Click"/>
+                                                <TextBlock x:Name="lblAd" Width="28" TextAlignment="Center" Foreground="Black" VerticalAlignment="Center"/>
+                                                <Button Content="+" Tag="A+" Width="26" Click="Ocup_Click"/>
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal" Margin="0,2">
+                                                <TextBlock Text="Niños:" Width="70" Foreground="Black" VerticalAlignment="Center"/>
+                                                <Button Content="−" Tag="N-" Width="26" Click="Ocup_Click"/>
+                                                <TextBlock x:Name="lblNi" Width="28" TextAlignment="Center" Foreground="Black" VerticalAlignment="Center"/>
+                                                <Button Content="+" Tag="N+" Width="26" Click="Ocup_Click"/>
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal" Margin="0,2">
+                                                <TextBlock Text="Bebés:" Width="70" Foreground="Black" VerticalAlignment="Center"/>
+                                                <Button Content="−" Tag="B-" Width="26" Click="Ocup_Click"/>
+                                                <TextBlock x:Name="lblBe" Width="28" TextAlignment="Center" Foreground="Black" VerticalAlignment="Center"/>
+                                                <Button Content="+" Tag="B+" Width="26" Click="Ocup_Click"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </Border>
+                                </Popup>
+
+                                <Grid Margin="0,4,0,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel Margin="0,0,4,0">
+                                        <TextBlock Text="Fecha entrada:" Style="{StaticResource Lbl}"/>
+                                        <DatePicker x:Name="dpEntrada"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Column="1" Margin="4,0,0,0">
+                                        <TextBlock Text="Fecha salida:" Style="{StaticResource Lbl}"/>
+                                        <DatePicker x:Name="dpSalida"/>
+                                    </StackPanel>
+                                </Grid>
+                                <StackPanel Orientation="Horizontal">
+                                    <StackPanel Margin="0,0,16,0">
+                                        <TextBlock Text="Hora entrada (HH:mm):" Style="{StaticResource Lbl}"/>
+                                        <TextBox x:Name="txtHoraEntrada" Width="70" HorizontalAlignment="Left"/>
+                                    </StackPanel>
+                                    <StackPanel>
+                                        <TextBlock Text="Hora salida (HH:mm):" Style="{StaticResource Lbl}"/>
+                                        <TextBox x:Name="txtHoraSalida" Width="70" HorizontalAlignment="Left"/>
+                                    </StackPanel>
+                                </StackPanel>
+                                <TextBlock Text="Precio total (€):" Style="{StaticResource Lbl}"/>
+                                <TextBox x:Name="txtPrecio" Width="100" HorizontalAlignment="Left"/>
+
+                                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                                    <RadioButton x:Name="rbConfirmada" Content="Confirmada" GroupName="est" Margin="0,0,12,0" Checked="rbEstado_Checked"/>
+                                    <RadioButton x:Name="rbPendiente" Content="Pendiente" GroupName="est" Margin="0,0,12,0" Checked="rbEstado_Checked"/>
+                                    <RadioButton x:Name="rbEliminada" Content="Eliminada" GroupName="est" Margin="0,0,12,0" Checked="rbEstado_Checked"/>
+                                    <RadioButton x:Name="rbCancelada" Content="Cancelada" GroupName="est" Checked="rbEstado_Checked"/>
+                                </StackPanel>
+                                <TextBlock x:Name="lblRecordatorio" Foreground="#E53935" FontSize="11" TextWrapping="Wrap" Margin="0,4,0,0"/>
+
+                                <TextBlock Text="Solicitudes especiales del cliente:" Style="{StaticResource Lbl}"/>
+                                <TextBox x:Name="txtSolicitudes" Height="55" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"/>
+                            </StackPanel>
+                        </GroupBox>
+                    </StackPanel>
+                </ScrollViewer>
+            </DockPanel>
+        </Border>
+    </Grid>
+</UserControl>

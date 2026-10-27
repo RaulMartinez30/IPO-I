@@ -81,6 +81,67 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Compile Include="Data\AppSettings.cs" />
+    <Compile Include="Data\DataStore.cs" />
+    <Compile Include="Data\Loc.cs" />
+    <Compile Include="Data\Models.cs" />
+    <Compile Include="Data\Util.cs" />
+    <Compile Include="Views\DashboardView.xaml.cs">
+      <DependentUpon>DashboardView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Views\DashboardView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Views\ReservasView.xaml.cs">
+      <DependentUpon>ReservasView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Views\ReservasView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Views\AlojamientosView.xaml.cs">
+      <DependentUpon>AlojamientosView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Views\AlojamientosView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Views\ActividadesView.xaml.cs">
+      <DependentUpon>ActividadesView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Views\ActividadesView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="Views\PersonalView.xaml.cs">
+      <DependentUpon>PersonalView.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Views\PersonalView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="GraficasWindow.xaml.cs">
+      <DependentUpon>GraficasWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="GraficasWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Compile Include="ConfiguracionWindow.xaml.cs">
+      <DependentUpon>ConfiguracionWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="ConfiguracionWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -110,6 +171,10 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\ICONO_BUNGALO.png" />
+    <Resource Include="Images\avatar.jpg" Condition="Exists('Images\avatar.jpg')" />
+    <Resource Include="Images\mapa.jpg" Condition="Exists('Images\mapa.jpg')" />
+    <Resource Include="Images\bungalow.jpg" Condition="Exists('Images\bungalow.jpg')" />
+    <Resource Include="Images\parcela.jpg" Condition="Exists('Images\parcela.jpg')" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
