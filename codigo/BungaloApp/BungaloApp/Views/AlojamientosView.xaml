@@ -13,13 +13,13 @@
                 <TextBlock DockPanel.Dock="Top" Text="LISTADO DE ALOJAMIENTOS" Style="{StaticResource H2}"/>
                 <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,4,0,8">
                     <TextBlock Text="Filtrar por tipo:" VerticalAlignment="Center" Margin="0,0,8,0"/>
-                    <ComboBox x:Name="cmbFiltroTipo" Width="150" SelectionChanged="Filtro_Changed"/>
+                    <ComboBox x:Name="cmbFiltroTipo" Width="150" SelectionChanged="Filtro_Changed" ToolTip="Filtrar alojamientos por tipo"/>
                 </StackPanel>
                 <DockPanel DockPanel.Dock="Bottom" Margin="0,6,0,0">
                     <TextBlock x:Name="lblTotales" DockPanel.Dock="Left" VerticalAlignment="Center" TextWrapping="Wrap" Width="190"/>
-                    <Button Content="AÑADIR NUEVO ALOJAMIENTO" Style="{StaticResource BtnAzul}" HorizontalAlignment="Right" Click="Nuevo_Click"/>
+                    <Button Content="AÑADIR NUEVO ALOJAMIENTO" Style="{StaticResource BtnAzul}" HorizontalAlignment="Right" Click="Nuevo_Click" ToolTip="Crear un nuevo alojamiento"/>
                 </DockPanel>
-                <DataGrid x:Name="dgAloj" SelectionChanged="dgAloj_SelectionChanged">
+                <DataGrid x:Name="dgAloj" SelectionChanged="dgAloj_SelectionChanged" MouseDoubleClick="dgAloj_MouseDoubleClick">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="NOMBRE" Binding="{Binding Nombre}" Width="Auto"/>
                         <DataGridTextColumn Header="TIPO" Binding="{Binding Tipo}" Width="*"/>
@@ -34,9 +34,9 @@
             <DockPanel>
                 <TextBlock DockPanel.Dock="Top" Text="DETALLES DEL ALOJAMIENTO" Style="{StaticResource H2}"/>
                 <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right">
-                    <Button Content="Guardar" Style="{StaticResource BtnAzul}" Click="Guardar_Click"/>
-                    <Button Content="Eliminar" Style="{StaticResource BtnRojo}" Click="Eliminar_Click"/>
-                    <Button Content="Cancelar" Style="{StaticResource BtnGris}" Click="Cancelar_Click"/>
+                    <Button Content="Guardar" Style="{StaticResource BtnAzul}" Click="Guardar_Click" ToolTip="Guardar cambios del alojamiento"/>
+                    <Button Content="Eliminar" Style="{StaticResource BtnRojo}" Click="Eliminar_Click" ToolTip="Eliminar este alojamiento"/>
+                    <Button Content="Cancelar" Style="{StaticResource BtnGris}" Click="Cancelar_Click" ToolTip="Descartar cambios"/>
                 </StackPanel>
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <StackPanel Margin="0,0,6,0">
@@ -51,11 +51,11 @@
                             </Grid.ColumnDefinitions>
                             <StackPanel Margin="0,0,6,0">
                                 <TextBlock Text="NOMBRE" Style="{StaticResource Lbl}"/>
-                                <TextBox x:Name="txtNombre"/>
+                                <TextBox x:Name="txtNombre" ToolTip="Nombre único del alojamiento"/>
                             </StackPanel>
                             <StackPanel Grid.Column="1" Margin="6,0,0,0">
                                 <TextBlock Text="TIPO" Style="{StaticResource Lbl}"/>
-                                <ComboBox x:Name="cmbTipo" SelectionChanged="cmbTipo_SelectionChanged"/>
+                                <ComboBox x:Name="cmbTipo" SelectionChanged="cmbTipo_SelectionChanged" ToolTip="Categoría del alojamiento"/>
                             </StackPanel>
                         </Grid>
 
@@ -69,9 +69,9 @@
                                 <RowDefinition/>
                             </Grid.RowDefinitions>
                             <TextBlock x:Name="lblEstado" VerticalAlignment="Center" FontWeight="SemiBold"/>
-                            <Button x:Name="btnEstado" Grid.Column="1" Content="CAMBIAR ESTADO" Style="{StaticResource BtnAzul}" Click="CambiarEstado_Click"/>
+                            <Button x:Name="btnEstado" Grid.Column="1" Content="CAMBIAR ESTADO" Style="{StaticResource BtnAzul}" Click="CambiarEstado_Click" ToolTip="Cambiar estado del alojamiento"/>
                             <TextBlock x:Name="lblLimpio" Grid.Row="1" VerticalAlignment="Center" FontWeight="SemiBold"/>
-                            <Button Grid.Row="1" Grid.Column="1" Content="SOLICITAR LIMPIEZA" Style="{StaticResource BtnAzul}" Click="Limpieza_Click"/>
+                            <Button Grid.Row="1" Grid.Column="1" Content="SOLICITAR LIMPIEZA" Style="{StaticResource BtnAzul}" Click="Limpieza_Click" ToolTip="Solicitar limpieza del alojamiento"/>
                         </Grid>
 
                         <Grid>
@@ -81,11 +81,11 @@
                             </Grid.ColumnDefinitions>
                             <StackPanel Margin="0,0,6,0">
                                 <TextBlock Text="CAPAC. MÁX. PERSONAS" Style="{StaticResource Lbl}"/>
-                                <TextBox x:Name="txtCap"/>
+                                <TextBox x:Name="txtCap" ToolTip="Número máximo de personas que puede alojar"/>
                             </StackPanel>
                             <StackPanel Grid.Column="1" Margin="6,0,0,0">
                                 <TextBlock Text="PERSONAS ALOJADAS" Style="{StaticResource Lbl}"/>
-                                <TextBox x:Name="txtPers"/>
+                                <TextBox x:Name="txtPers" ToolTip="Número actual de personas alojadas"/>
                             </StackPanel>
                         </Grid>
 

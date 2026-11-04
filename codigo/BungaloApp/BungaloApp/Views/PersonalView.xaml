@@ -16,12 +16,12 @@
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
-                    <TextBox x:Name="txtBuscar" Height="28" VerticalContentAlignment="Center" ToolTip="Buscar por nombre o especialidad" TextChanged="Filtro_Changed"/>
-                    <ComboBox x:Name="cmbFiltroEstado" Grid.Column="1" Width="120" Margin="6,0,0,0" SelectionChanged="Filtro_Changed"/>
+                    <TextBox x:Name="txtBuscar" Height="28" VerticalContentAlignment="Center" ToolTip="Buscar por nombre o especialidad del empleado" TextChanged="Filtro_Changed"/>
+                    <ComboBox x:Name="cmbFiltroEstado" Grid.Column="1" Width="120" Margin="6,0,0,0" SelectionChanged="Filtro_Changed" ToolTip="Filtrar por estado del empleado"/>
                 </Grid>
                 <DockPanel DockPanel.Dock="Bottom" Margin="0,6,0,0">
                     <TextBlock x:Name="lblTotal" DockPanel.Dock="Left" VerticalAlignment="Center"/>
-                    <Button Content="Nuevo empleado  ＋" Style="{StaticResource BtnAzul}" HorizontalAlignment="Right" Click="Nuevo_Click"/>
+                    <Button Content="Nuevo empleado  ＋" Style="{StaticResource BtnAzul}" HorizontalAlignment="Right" Click="Nuevo_Click" ToolTip="Añadir un nuevo empleado"/>
                 </DockPanel>
                 <DataGrid x:Name="dgPersonal" SelectionChanged="dgPersonal_SelectionChanged">
                     <DataGrid.Columns>
@@ -47,9 +47,9 @@
             <DockPanel>
                 <TextBlock DockPanel.Dock="Top" Text="DETALLES DE EMPLEADO" Style="{StaticResource H2}"/>
                 <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right">
-                    <Button Content="GUARDAR" Style="{StaticResource BtnAzul}" Click="Guardar_Click"/>
-                    <Button x:Name="btnBaja" Content="DAR BAJA" Style="{StaticResource BtnRojo}" Click="Baja_Click"/>
-                    <Button Content="CANCELAR" Style="{StaticResource BtnGris}" Click="Cancelar_Click"/>
+                    <Button Content="GUARDAR" Style="{StaticResource BtnAzul}" Click="Guardar_Click" ToolTip="Guardar cambios del empleado"/>
+                    <Button x:Name="btnBaja" Content="DAR BAJA" Style="{StaticResource BtnRojo}" Click="Baja_Click" ToolTip="Dar de baja al empleado"/>
+                    <Button Content="CANCELAR" Style="{StaticResource BtnGris}" Click="Cancelar_Click" ToolTip="Descartar cambios"/>
                 </StackPanel>
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <StackPanel Margin="0,0,6,0">

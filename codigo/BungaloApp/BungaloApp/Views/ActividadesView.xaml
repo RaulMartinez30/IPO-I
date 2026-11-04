@@ -14,23 +14,23 @@
                 <WrapPanel DockPanel.Dock="Top" Margin="0,4,0,8">
                     <StackPanel Margin="0,0,10,0">
                         <TextBlock Text="DÍA" Style="{StaticResource Lbl}" Margin="0,0,0,2"/>
-                        <DatePicker x:Name="dpFiltroDia" Width="130" SelectedDateChanged="Filtro_Changed"/>
+                        <DatePicker x:Name="dpFiltroDia" Width="130" SelectedDateChanged="Filtro_Changed" ToolTip="Filtrar por día"/>
                     </StackPanel>
                     <StackPanel Margin="0,0,10,0">
                         <TextBlock Text="TIPO" Style="{StaticResource Lbl}" Margin="0,0,0,2"/>
-                        <ComboBox x:Name="cmbFiltroTipo" Width="130" SelectionChanged="Filtro_Changed"/>
+                        <ComboBox x:Name="cmbFiltroTipo" Width="130" SelectionChanged="Filtro_Changed" ToolTip="Filtrar por tipo de actividad"/>
                     </StackPanel>
                     <StackPanel>
                         <TextBlock Text="MONITOR" Style="{StaticResource Lbl}" Margin="0,0,0,2"/>
-                        <TextBox x:Name="txtFiltroMonitor" Width="130" Height="22" ToolTip="Buscar por nombre" TextChanged="Filtro_Changed"/>
+                        <TextBox x:Name="txtFiltroMonitor" Width="130" Height="22" ToolTip="Buscar por nombre de monitor" TextChanged="Filtro_Changed"/>
                     </StackPanel>
-                    <Button Content="Limpiar filtros" Style="{StaticResource BtnGris}" VerticalAlignment="Bottom" Padding="8,2" Click="LimpiarFiltros_Click"/>
+                    <Button Content="Limpiar filtros" Style="{StaticResource BtnGris}" VerticalAlignment="Bottom" Padding="8,2" Click="LimpiarFiltros_Click" ToolTip="Limpiar todos los filtros"/>
                 </WrapPanel>
                 <DockPanel DockPanel.Dock="Bottom" Margin="0,6,0,0">
                     <TextBlock x:Name="lblTotal" DockPanel.Dock="Left" VerticalAlignment="Center"/>
-                    <Button Content="Nueva Actividad  ＋" Style="{StaticResource BtnAzul}" HorizontalAlignment="Right" Click="Nueva_Click"/>
+                    <Button Content="Nueva Actividad  ＋" Style="{StaticResource BtnAzul}" HorizontalAlignment="Right" Click="Nueva_Click" ToolTip="Crear una nueva actividad"/>
                 </DockPanel>
-                <DataGrid x:Name="dgAct" SelectionChanged="dgAct_SelectionChanged">
+                <DataGrid x:Name="dgAct" SelectionChanged="dgAct_SelectionChanged" MouseDoubleClick="dgAct_MouseDoubleClick">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="DÍA-HORA" Binding="{Binding DiaHora}" Width="Auto"/>
                         <DataGridTextColumn Header="ACTIVIDAD" Binding="{Binding Nombre}" Width="*"/>
@@ -53,9 +53,9 @@
             <DockPanel>
                 <TextBlock DockPanel.Dock="Top" Text="DETALLES DE LA ACTIVIDAD" Style="{StaticResource H2}"/>
                 <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right">
-                    <Button Content="Guardar" Style="{StaticResource BtnAzul}" Click="Guardar_Click"/>
-                    <Button Content="Eliminar" Style="{StaticResource BtnRojo}" Click="Eliminar_Click"/>
-                    <Button Content="Cancelar" Style="{StaticResource BtnGris}" Click="Cancelar_Click"/>
+                    <Button Content="Guardar" Style="{StaticResource BtnAzul}" Click="Guardar_Click" ToolTip="Guardar cambios de la actividad"/>
+                    <Button Content="Eliminar" Style="{StaticResource BtnRojo}" Click="Eliminar_Click" ToolTip="Eliminar esta actividad"/>
+                    <Button Content="Cancelar" Style="{StaticResource BtnGris}" Click="Cancelar_Click" ToolTip="Descartar cambios"/>
                 </StackPanel>
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <StackPanel Margin="0,0,6,0">

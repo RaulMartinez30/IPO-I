@@ -16,12 +16,12 @@
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
-                    <TextBox x:Name="txtBuscar" Height="28" VerticalContentAlignment="Center" ToolTip="Buscar por cliente o ID" TextChanged="Filtro_Changed"/>
-                    <ComboBox x:Name="cmbFiltroEstado" Grid.Column="1" Width="130" Margin="6,0,0,0" SelectionChanged="Filtro_Changed"/>
+                    <TextBox x:Name="txtBuscar" Height="28" VerticalContentAlignment="Center" ToolTip="Buscar por nombre de cliente o ID de reserva" TextChanged="Filtro_Changed"/>
+                    <ComboBox x:Name="cmbFiltroEstado" Grid.Column="1" Width="130" Margin="6,0,0,0" SelectionChanged="Filtro_Changed" ToolTip="Filtrar por estado de reserva"/>
                 </Grid>
                 <DockPanel DockPanel.Dock="Bottom" Margin="0,6,0,0">
                     <TextBlock x:Name="lblTotal" DockPanel.Dock="Left" VerticalAlignment="Center"/>
-                    <Button Content="AÑADIR NUEVO CLIENTE" Style="{StaticResource BtnAzul}" HorizontalAlignment="Right" Click="Nuevo_Click"/>
+                    <Button Content="AÑADIR NUEVO CLIENTE" Style="{StaticResource BtnAzul}" HorizontalAlignment="Right" Click="Nuevo_Click" ToolTip="Crear una nueva reserva"/>
                 </DockPanel>
                 <DataGrid x:Name="dgReservas" SelectionChanged="dgReservas_SelectionChanged">
                     <DataGrid.Columns>
@@ -48,9 +48,9 @@
             <DockPanel>
                 <TextBlock DockPanel.Dock="Top" Text="NUEVA / DETALLES DE RESERVA" Style="{StaticResource H2}"/>
                 <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right">
-                    <Button Content="GUARDAR" Style="{StaticResource BtnAzul}" Click="Guardar_Click"/>
-                    <Button Content="ELIMINAR" Style="{StaticResource BtnRojo}" ToolTip="Eliminar del listado" Click="Eliminar_Click"/>
-                    <Button Content="CANCELAR" Style="{StaticResource BtnGris}" Click="Cancelar_Click"/>
+                    <Button Content="GUARDAR" Style="{StaticResource BtnAzul}" Click="Guardar_Click" ToolTip="Guardar cambios de la reserva"/>
+                    <Button Content="ELIMINAR" Style="{StaticResource BtnRojo}" ToolTip="Eliminar esta reserva" Click="Eliminar_Click"/>
+                    <Button Content="CANCELAR" Style="{StaticResource BtnGris}" Click="Cancelar_Click" ToolTip="Descartar cambios"/>
                 </StackPanel>
 
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
@@ -59,15 +59,15 @@
                         <GroupBox Header="👤 CLIENTE" Margin="0,0,0,8" Padding="6">
                             <StackPanel>
                                 <TextBlock Text="Nombre:" Style="{StaticResource Lbl}" Margin="0,0,0,2"/>
-                                <TextBox x:Name="txtNombre"/>
+                                <TextBox x:Name="txtNombre" ToolTip="Nombre completo del cliente"/>
                                 <TextBlock Text="DNI:" Style="{StaticResource Lbl}"/>
-                                <TextBox x:Name="txtDni" MaxLength="9"/>
+                                <TextBox x:Name="txtDni" MaxLength="9" ToolTip="Documento nacional de identidad"/>
                                 <TextBlock Text="Teléfono:" Style="{StaticResource Lbl}"/>
-                                <TextBox x:Name="txtTelefono" MaxLength="9"/>
+                                <TextBox x:Name="txtTelefono" MaxLength="9" ToolTip="Número de teléfono"/>
                                 <TextBlock Text="E-mail:" Style="{StaticResource Lbl}"/>
-                                <TextBox x:Name="txtEmail"/>
+                                <TextBox x:Name="txtEmail" ToolTip="Correo electrónico del cliente"/>
                                 <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
-                                    <CheckBox x:Name="chkVehiculo" Content="Vehículo" VerticalAlignment="Center" Checked="chkVehiculo_Changed" Unchecked="chkVehiculo_Changed"/>
+                                    <CheckBox x:Name="chkVehiculo" Content="Vehículo" VerticalAlignment="Center" Checked="chkVehiculo_Changed" Unchecked="chkVehiculo_Changed" ToolTip="Indicar si el cliente trae vehículo"/>
                                     <TextBlock Text="Matrícula:" Style="{StaticResource Lbl}" Margin="16,0,6,0" VerticalAlignment="Center"/>
                                     <TextBox x:Name="txtMatricula" Width="110"/>
                                     <CheckBox x:Name="chkMascota" Content="Mascota" Margin="16,0,0,0" VerticalAlignment="Center"/>

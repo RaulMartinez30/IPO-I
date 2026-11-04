@@ -3,28 +3,65 @@
   "WorkspaceRootPath": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|c:\\users\\raulm\\onedrive\\documentos\\ingenieria informatica\\3\\primer cuatri\\ipo i\\lab\\ipo-i\\codigo\\bungaloapp\\bungaloapp\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|solutionrelative:bungaloapp\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\raulm\\.copilot\\plans\\plan-agregar-tooltips-en-todas-las-vistas.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|MarkdownSecurePreview"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\bungaloapp\\views\\dashboardview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|solutionrelative:bungaloapp\\views\\dashboardview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|c:\\users\\raulm\\onedrive\\documentos\\ingenieria informatica\\3\\primer cuatri\\ipo i\\lab\\ipo-i\\codigo\\bungaloapp\\bungaloapp\\views\\personalview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|solutionrelative:bungaloapp\\views\\personalview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|c:\\users\\raulm\\onedrive\\documentos\\ingenieria informatica\\3\\primer cuatri\\ipo i\\lab\\ipo-i\\codigo\\bungaloapp\\bungaloapp\\views\\reservasview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|solutionrelative:bungaloapp\\views\\reservasview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|c:\\users\\raulm\\onedrive\\documentos\\ingenieria informatica\\3\\primer cuatri\\ipo i\\lab\\ipo-i\\codigo\\bungaloapp\\bungaloapp\\views\\actividadesview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|solutionrelative:bungaloapp\\views\\actividadesview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\bungaloapp\\views\\alojamientosview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|solutionrelative:bungaloapp\\views\\alojamientosview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\raulm\\.copilot\\plans\\plan-plan-de-modificaciones-ronda-2-para-bungaloapp.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|MarkdownSecurePreview"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\raulm\\.copilot\\plans\\plan-plan-de-modificaciones-para-bungaloapp.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|MarkdownSecurePreview"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|c:\\users\\raulm\\onedrive\\documentos\\ingenieria informatica\\3\\primer cuatri\\ipo i\\lab\\ipo-i\\codigo\\bungaloapp\\bungaloapp\\views\\reservasview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|solutionrelative:bungaloapp\\views\\reservasview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\bungaloapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|solutionrelative:bungaloapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\bungaloapp\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|solutionrelative:bungaloapp\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\bungaloapp\\splashwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|solutionrelative:bungaloapp\\splashwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\bungaloapp\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|solutionrelative:bungaloapp\\loginwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\bungaloapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|solutionrelative:bungaloapp\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\bungaloapp\\views\\alojamientosview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|solutionrelative:bungaloapp\\views\\alojamientosview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\bungaloapp\\splashwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|solutionrelative:bungaloapp\\splashwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\bungaloapp\\views\\actividadesview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|solutionrelative:bungaloapp\\views\\actividadesview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\bungaloapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|solutionrelative:bungaloapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\bungaloapp\\data\\loc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|solutionrelative:bungaloapp\\data\\loc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\bungaloapp\\views\\dashboardview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|solutionrelative:bungaloapp\\views\\dashboardview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\bungaloapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,83 +80,205 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LoginWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\LoginWindow.xaml.cs",
-              "RelativeDocumentMoniker": "BungaloApp\\LoginWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\LoginWindow.xaml.cs",
-              "RelativeToolTip": "BungaloApp\\LoginWindow.xaml.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAYwBQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-16T19:50:28.925Z",
-              "EditorCaption": ""
+              "Title": "plan-agregar-tooltips-en-todas-las-vistas.md [Versi\u00F3n preliminar]",
+              "DocumentMoniker": "C:\\Users\\raulm\\.copilot\\plans\\plan-agregar-tooltips-en-todas-las-vistas.md",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\.copilot\\plans\\plan-agregar-tooltips-en-todas-las-vistas.md",
+              "ToolTip": "C:\\Users\\raulm\\.copilot\\plans\\plan-agregar-tooltips-en-todas-las-vistas.md [Versi\u00F3n preliminar]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\.copilot\\plans\\plan-agregar-tooltips-en-todas-las-vistas.md [Versi\u00F3n preliminar]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-11-04T14:08:38.251Z",
+              "EditorCaption": " [Versi\u00F3n preliminar]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "SplashWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\SplashWindow.xaml.cs",
-              "RelativeDocumentMoniker": "BungaloApp\\SplashWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\SplashWindow.xaml.cs",
-              "RelativeToolTip": "BungaloApp\\SplashWindow.xaml.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAzwBQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-16T19:24:56.675Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LoginWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\LoginWindow.xaml",
-              "RelativeDocumentMoniker": "BungaloApp\\LoginWindow.xaml",
-              "ToolTip": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\LoginWindow.xaml",
-              "RelativeToolTip": "BungaloApp\\LoginWindow.xaml",
+              "Title": "PersonalView.xaml",
+              "DocumentMoniker": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Views\\PersonalView.xaml",
+              "RelativeDocumentMoniker": "BungaloApp\\Views\\PersonalView.xaml",
+              "ToolTip": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Views\\PersonalView.xaml",
+              "RelativeToolTip": "BungaloApp\\Views\\PersonalView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-10-16T19:41:19.752Z"
+              "WhenOpened": "2026-11-04T14:08:09.839Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\App.xaml",
-              "RelativeDocumentMoniker": "BungaloApp\\App.xaml",
-              "ToolTip": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\App.xaml",
-              "RelativeToolTip": "BungaloApp\\App.xaml",
+              "Title": "ReservasView.xaml",
+              "DocumentMoniker": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Views\\ReservasView.xaml",
+              "RelativeDocumentMoniker": "BungaloApp\\Views\\ReservasView.xaml",
+              "ToolTip": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Views\\ReservasView.xaml",
+              "RelativeToolTip": "BungaloApp\\Views\\ReservasView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-10-16T19:24:01.541Z"
+              "WhenOpened": "2026-11-04T14:07:55.772Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "SplashWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\SplashWindow.xaml",
-              "RelativeDocumentMoniker": "BungaloApp\\SplashWindow.xaml",
-              "ToolTip": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\SplashWindow.xaml",
-              "RelativeToolTip": "BungaloApp\\SplashWindow.xaml",
+              "Title": "ActividadesView.xaml",
+              "DocumentMoniker": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Views\\ActividadesView.xaml",
+              "RelativeDocumentMoniker": "BungaloApp\\Views\\ActividadesView.xaml",
+              "ToolTip": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Views\\ActividadesView.xaml",
+              "RelativeToolTip": "BungaloApp\\Views\\ActividadesView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-10-16T19:20:45.504Z"
+              "WhenOpened": "2026-11-04T14:07:36.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "plan-plan-de-modificaciones-ronda-2-para-bungaloapp.md [Versi\u00F3n preliminar]",
+              "DocumentMoniker": "C:\\Users\\raulm\\.copilot\\plans\\plan-plan-de-modificaciones-ronda-2-para-bungaloapp.md",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\.copilot\\plans\\plan-plan-de-modificaciones-ronda-2-para-bungaloapp.md",
+              "ToolTip": "C:\\Users\\raulm\\.copilot\\plans\\plan-plan-de-modificaciones-ronda-2-para-bungaloapp.md [Versi\u00F3n preliminar]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\.copilot\\plans\\plan-plan-de-modificaciones-ronda-2-para-bungaloapp.md [Versi\u00F3n preliminar]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-11-04T13:33:55.215Z",
+              "EditorCaption": " [Versi\u00F3n preliminar]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "plan-plan-de-modificaciones-para-bungaloapp.md [Versi\u00F3n preliminar]",
+              "DocumentMoniker": "C:\\Users\\raulm\\.copilot\\plans\\plan-plan-de-modificaciones-para-bungaloapp.md",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\.copilot\\plans\\plan-plan-de-modificaciones-para-bungaloapp.md",
+              "ToolTip": "C:\\Users\\raulm\\.copilot\\plans\\plan-plan-de-modificaciones-para-bungaloapp.md [Versi\u00F3n preliminar]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\.copilot\\plans\\plan-plan-de-modificaciones-para-bungaloapp.md [Versi\u00F3n preliminar]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-11-04T14:04:34Z",
+              "EditorCaption": " [Versi\u00F3n preliminar]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ReservasView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Views\\ReservasView.xaml.cs",
+              "RelativeDocumentMoniker": "BungaloApp\\Views\\ReservasView.xaml.cs",
+              "ToolTip": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Views\\ReservasView.xaml.cs",
+              "RelativeToolTip": "BungaloApp\\Views\\ReservasView.xaml.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAvwCoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-04T13:32:58.225Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "BungaloApp\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\MainWindow.xaml.cs",
+              "RelativeToolTip": "BungaloApp\\MainWindow.xaml.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-04T13:33:13.642Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DashboardView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Views\\DashboardView.xaml.cs",
+              "RelativeDocumentMoniker": "BungaloApp\\Views\\DashboardView.xaml.cs",
+              "ToolTip": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Views\\DashboardView.xaml.cs",
+              "RelativeToolTip": "BungaloApp\\Views\\DashboardView.xaml.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAABBwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-04T13:32:02.96Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DashboardView.xaml",
+              "DocumentMoniker": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Views\\DashboardView.xaml",
+              "RelativeDocumentMoniker": "BungaloApp\\Views\\DashboardView.xaml",
+              "ToolTip": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Views\\DashboardView.xaml",
+              "RelativeToolTip": "BungaloApp\\Views\\DashboardView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-11-04T13:31:48.364Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Loc.cs",
+              "DocumentMoniker": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Data\\Loc.cs",
+              "RelativeDocumentMoniker": "BungaloApp\\Data\\Loc.cs",
+              "ToolTip": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Data\\Loc.cs",
+              "RelativeToolTip": "BungaloApp\\Data\\Loc.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-04T13:31:40.842Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AlojamientosView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Views\\AlojamientosView.xaml.cs",
+              "RelativeDocumentMoniker": "BungaloApp\\Views\\AlojamientosView.xaml.cs",
+              "ToolTip": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Views\\AlojamientosView.xaml.cs",
+              "RelativeToolTip": "BungaloApp\\Views\\AlojamientosView.xaml.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-04T13:23:31.053Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "AlojamientosView.xaml",
+              "DocumentMoniker": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Views\\AlojamientosView.xaml",
+              "RelativeDocumentMoniker": "BungaloApp\\Views\\AlojamientosView.xaml",
+              "ToolTip": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Views\\AlojamientosView.xaml",
+              "RelativeToolTip": "BungaloApp\\Views\\AlojamientosView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-11-04T13:23:21.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\MainWindow.xaml",
               "RelativeDocumentMoniker": "BungaloApp\\MainWindow.xaml",
               "ToolTip": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\MainWindow.xaml",
               "RelativeToolTip": "BungaloApp\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-10-16T19:19:56.869Z"
+              "WhenOpened": "2026-11-04T13:23:02.379Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "BungaloApp\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\MainWindow.xaml.cs",
-              "RelativeToolTip": "BungaloApp\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 13,
+              "Title": "ActividadesView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Views\\ActividadesView.xaml.cs",
+              "RelativeDocumentMoniker": "BungaloApp\\Views\\ActividadesView.xaml.cs",
+              "ToolTip": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Views\\ActividadesView.xaml.cs",
+              "RelativeToolTip": "BungaloApp\\Views\\ActividadesView.xaml.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-16T19:19:54.434Z"
+              "WhenOpened": "2026-11-04T13:23:50.057Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LoginWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\LoginWindow.xaml.cs",
+              "RelativeDocumentMoniker": "BungaloApp\\LoginWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\LoginWindow.xaml.cs",
+              "RelativeToolTip": "BungaloApp\\LoginWindow.xaml.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAADgvyUAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-28T20:15:04.895Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LoginWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\LoginWindow.xaml",
+              "RelativeDocumentMoniker": "BungaloApp\\LoginWindow.xaml",
+              "ToolTip": "C:\\Users\\raulm\\OneDrive\\Documentos\\Ingenieria Informatica\\3\\Primer Cuatri\\IPO I\\LAB\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\LoginWindow.xaml",
+              "RelativeToolTip": "BungaloApp\\LoginWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-10-28T20:12:01.413Z"
             }
           ]
         }

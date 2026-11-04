@@ -35,6 +35,18 @@ namespace BungaloApp
             if (primera != null) dgAct.SelectedItem = primera; else NuevoFormulario();
         }
 
+        public void ActualizarHeaders()
+        {
+            if (dgAct.Columns.Count >= 5)
+            {
+                dgAct.Columns[0].Header = Loc.T("hdDia");
+                dgAct.Columns[1].Header = Loc.T("hdHora");
+                dgAct.Columns[2].Header = Loc.T("hdActividad");
+                dgAct.Columns[3].Header = Loc.T("hdPlazas");
+                dgAct.Columns[4].Header = Loc.T("hdEstado");
+            }
+        }
+
         private void RecargarMonitores()
         {
             var l = DataStore.Empleados.Where(x => x.Estado == "Activo").Select(x => x.Nombre).ToList();
@@ -182,6 +194,15 @@ namespace BungaloApp
         private void Cancelar_Click(object sender, RoutedEventArgs e)
         {
             if (nuevo) NuevoFormulario(); else Mostrar(actual);
+        }
+
+        private void dgAct_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            var actividad = dgAct.SelectedItem as Actividad;
+            if (actividad != null)
+            {
+                Mostrar(actividad);
+            }
         }
     }
 }

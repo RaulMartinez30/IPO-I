@@ -1,9 +1,9 @@
 <Window x:Class="BungaloApp.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Bungalo APP" Height="780" Width="1280" MinHeight="680" MinWidth="1050"
-        WindowStartupLocation="CenterScreen"
-        Background="{DynamicResource AppBg}" Foreground="{DynamicResource TextBrush}">
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Bungalo APP" Height="680" Width="1050" MinHeight="680" MinWidth="1050"
+    WindowStartupLocation="CenterScreen"
+    Background="{DynamicResource AppBg}" Foreground="{DynamicResource TextBrush}">
 
     <Window.Resources>
         <Style x:Key="IconBtn" TargetType="Button">
@@ -72,11 +72,11 @@
                 <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center">
                     <Button x:Name="btnAvisos" Background="#FFA000" Foreground="Black" FontWeight="Bold"
                             BorderBrush="Black" BorderThickness="2" Padding="12,5" Margin="0,0,10,0" Cursor="Hand"
-                            Click="btnAvisos_Click"/>
-                    <Button x:Name="btnIdioma" Style="{StaticResource IconBtn}" FontSize="15" FontWeight="Bold" Click="btnIdioma_Click"/>
-                    <Button x:Name="btnAyuda" Style="{StaticResource IconBtn}" Content="📖" Click="btnAyuda_Click"/>
-                    <Button x:Name="btnAjustes" Style="{StaticResource IconBtn}" Content="⚙" Click="btnAjustes_Click"/>
-                    <Button x:Name="btnSalir" Style="{StaticResource IconBtn}" Content="🚪" Click="btnSalir_Click"/>
+                            Click="btnAvisos_Click" ToolTip="Ver avisos y alertas del sistema"/>
+                    <Button x:Name="btnIdioma" Style="{StaticResource IconBtn}" FontSize="15" FontWeight="Bold" Click="btnIdioma_Click" ToolTip="Cambiar idioma de la aplicación"/>
+                    <Button x:Name="btnAyuda" Style="{StaticResource IconBtn}" Content="📖" Click="btnAyuda_Click" ToolTip="Obtener ayuda y documentación"/>
+                    <Button x:Name="btnAjustes" Style="{StaticResource IconBtn}" Content="⚙" Click="btnAjustes_Click" ToolTip="Configurar preferencias de la aplicación"/>
+                    <Button x:Name="btnSalir" Style="{StaticResource IconBtn}" Content="🚪" Click="btnSalir_Click" ToolTip="Cerrar sesión"/>
                 </StackPanel>
             </Grid>
         </Border>

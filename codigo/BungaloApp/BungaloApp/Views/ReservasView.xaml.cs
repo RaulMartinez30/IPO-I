@@ -32,6 +32,19 @@ namespace BungaloApp
             NuevoFormulario();
         }
 
+        public void ActualizarHeaders()
+        {
+            if (dgReservas.Columns.Count >= 6)
+            {
+                dgReservas.Columns[0].Header = Loc.T("hdIdCliente");
+                dgReservas.Columns[1].Header = Loc.T("hdNombre");
+                dgReservas.Columns[2].Header = Loc.T("hdApellido");
+                dgReservas.Columns[3].Header = Loc.T("hdFechaEntrada");
+                dgReservas.Columns[4].Header = Loc.T("hdAlojamiento");
+                dgReservas.Columns[5].Header = Loc.T("hdEstado");
+            }
+        }
+
         // ---------- Lista y filtros ----------
 
         private bool Filtrar(object o)

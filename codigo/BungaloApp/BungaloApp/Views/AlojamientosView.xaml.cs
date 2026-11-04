@@ -39,6 +39,16 @@ namespace BungaloApp
             else NuevoFormulario();
         }
 
+        public void ActualizarHeaders()
+        {
+            if (dgAloj.Columns.Count >= 3)
+            {
+                dgAloj.Columns[0].Header = Loc.T("hdNombre");
+                dgAloj.Columns[1].Header = Loc.T("hdTipo");
+                dgAloj.Columns[2].Header = Loc.T("hdEstado");
+            }
+        }
+
         private bool Filtrar(object o)
         {
             var a = o as Alojamiento;
@@ -206,6 +216,15 @@ namespace BungaloApp
         private void Cancelar_Click(object sender, RoutedEventArgs e)
         {
             if (nuevo) NuevoFormulario(); else Mostrar(actual);
+        }
+
+        private void dgAloj_MouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            var alojamiento = dgAloj.SelectedItem as Alojamiento;
+            if (alojamiento != null)
+            {
+                Mostrar(alojamiento);
+            }
         }
     }
 }

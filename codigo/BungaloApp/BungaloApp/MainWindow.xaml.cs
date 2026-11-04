@@ -47,6 +47,7 @@ namespace BungaloApp
             btnAyuda.ToolTip = Loc.T("ayuda");
             btnAjustes.ToolTip = Loc.T("ajustes");
             btnSalir.ToolTip = Loc.T("salir");
+            btnAvisos.ToolTip = Loc.T("ttAvisos");
             ActualizarAvisos();
         }
 
@@ -102,6 +103,11 @@ namespace BungaloApp
             actual = clave;
             MarcarNav(clave);
             ActualizarAvisos();
+
+            // Actualizar headers después de cambiar idioma
+            if (vista is ReservasView rv) rv.ActualizarHeaders();
+            else if (vista is AlojamientosView av) av.ActualizarHeaders();
+            else if (vista is ActividadesView acv) acv.ActualizarHeaders();
         }
 
         private void lstNav_SelectionChanged(object sender, SelectionChangedEventArgs e)

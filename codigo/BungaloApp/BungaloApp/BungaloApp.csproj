@@ -62,7 +62,6 @@
       <DependentUpon>SplashWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="LoginWindow.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MainWindow.xaml">
@@ -175,6 +174,12 @@
     <Resource Include="Images\mapa.jpg" Condition="Exists('Images\mapa.jpg')" />
     <Resource Include="Images\bungalow.jpg" Condition="Exists('Images\bungalow.jpg')" />
     <Resource Include="Images\parcela.jpg" Condition="Exists('Images\parcela.jpg')" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\mono_focus.png" />
+    <Resource Include="Images\mono_idle.png" />
+    <Resource Include="Images\mono_ojos_abiertos.png" />
+    <Resource Include="Images\mono_ojos_cerrados.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

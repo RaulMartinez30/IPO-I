@@ -22,7 +22,7 @@
                             <TextBlock x:Name="kpiPersonal" Foreground="Black" FontWeight="Bold" FontSize="15" HorizontalAlignment="Center"/>
                         </Border>
                     </UniformGrid>
-                    <Button x:Name="btnGraficas" Style="{StaticResource BtnAzul}" HorizontalAlignment="Right" Click="btnGraficas_Click"/>
+                    <Button x:Name="btnGraficas" Style="{StaticResource BtnAzul}" HorizontalAlignment="Right" Click="btnGraficas_Click" ToolTip="Ver gráficas detalladas de ocupación"/>
                 </StackPanel>
             </Border>
 
@@ -37,7 +37,7 @@
                     <StackPanel>
                         <TextBlock x:Name="lblMapa" Style="{StaticResource H2}"/>
                         <TextBlock x:Name="lblMapaTitulo" FontWeight="SemiBold" FontSize="12"/>
-                        <Image x:Name="imgMapa" Height="320" Stretch="Uniform" Cursor="Hand" Margin="0,6" MouseLeftButtonUp="imgMapa_Click"/>
+                        <Image x:Name="imgMapa" Height="320" Stretch="Uniform" Cursor="Hand" Margin="0,6" MouseLeftButtonUp="imgMapa_Click" ToolTip="Haz clic para ver detalles de ocupación"/>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                             <Rectangle Width="14" Height="14" Fill="#4CAF50" Stroke="Black" Margin="4"/>
                             <TextBlock x:Name="lblLibre" VerticalAlignment="Center" Margin="0,0,14,0"/>
@@ -55,7 +55,7 @@
                     <Border Style="{StaticResource Card}">
                         <StackPanel>
                             <TextBlock Text="Reservas" Style="{StaticResource H2}"/>
-                            <DataGrid x:Name="dgReservas" Height="170">
+                            <DataGrid x:Name="dgReservas" Height="170" MouseDoubleClick="dgReservas_MouseDoubleClick" ToolTip="Haz doble clic en una reserva para ir a detalles">
                                 <DataGrid.Columns>
                                     <DataGridTextColumn Header="FECHA ENTRADA" Binding="{Binding FechaEntradaTxt}" Width="Auto"/>
                                     <DataGridTextColumn Header="ID - CLIENTE" Binding="{Binding IdCliente}" Width="*"/>
@@ -68,7 +68,7 @@
                     <Border Style="{StaticResource Card}">
                         <StackPanel>
                             <TextBlock x:Name="lblProxAct" Style="{StaticResource H2}"/>
-                            <DataGrid x:Name="dgActividades" Height="190">
+                            <DataGrid x:Name="dgActividades" Height="190" MouseDoubleClick="dgActividades_MouseDoubleClick" ToolTip="Haz doble clic en una actividad para ir a detalles">
                                 <DataGrid.Columns>
                                     <DataGridTextColumn Header="DÍA" Binding="{Binding FechaTxt}" Width="Auto"/>
                                     <DataGridTextColumn Header="HORA" Binding="{Binding Hora}" Width="Auto"/>

@@ -27,6 +27,23 @@ namespace BungaloApp
             btnGraficas.Content = Loc.T("graficas");
             imgMapa.Source = Util.Img("mapa.jpg");
 
+            // Actualizar headers de DataGrid de forma segura
+            if (dgReservas.Columns.Count >= 4)
+            {
+                dgReservas.Columns[0].Header = Loc.T("hdFechaEntrada");
+                dgReservas.Columns[1].Header = Loc.T("hdIdCliente");
+                dgReservas.Columns[2].Header = Loc.T("hdAlojamiento");
+                dgReservas.Columns[3].Header = Loc.T("hdEstado");
+            }
+
+            if (dgActividades.Columns.Count >= 4)
+            {
+                dgActividades.Columns[0].Header = Loc.T("hdDia");
+                dgActividades.Columns[1].Header = Loc.T("hdHora");
+                dgActividades.Columns[2].Header = Loc.T("hdActividad");
+                dgActividades.Columns[3].Header = Loc.T("hdMonitor");
+            }
+
             int total = DataStore.Alojamientos.Count;
             int libres = DataStore.Alojamientos.Count(a => a.Estado == "Disponible");
             int ocupados = DataStore.Alojamientos.Count(a => a.Estado == "Ocupado");
@@ -51,6 +68,18 @@ namespace BungaloApp
         {
             var w = Window.GetWindow(this) as MainWindow;
             if (w != null) w.Navegar("alojamientos");
+        }
+
+        private void dgReservas_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var w = Window.GetWindow(this) as MainWindow;
+            if (w != null) w.Navegar("reservas");
+        }
+
+        private void dgActividades_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var w = Window.GetWindow(this) as MainWindow;
+            if (w != null) w.Navegar("actividades");
         }
     }
 }
