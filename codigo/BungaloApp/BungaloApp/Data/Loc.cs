@@ -96,6 +96,56 @@ namespace BungaloApp
             { "ttBuscar",       new[]{ "Buscar elemento", "Search item" } },
             { "ttRecargar",     new[]{ "Recargar datos", "Reload data" } },
             { "ttNuevo",        new[]{ "Crear nuevo elemento", "Create new item" } },
+
+            // Secciones y títulos
+            { "secListado",        new[]{ "LISTADO DE ALOJAMIENTOS", "ACCOMMODATION LIST" } },
+            { "secDetalles",       new[]{ "DETALLES DEL ALOJAMIENTO", "ACCOMMODATION DETAILS" } },
+            { "secGestion",        new[]{ "GESTIÓN DE ACTIVIDADES", "ACTIVITIES MANAGEMENT" } },
+            { "secDetallesAct",     new[]{ "DETALLES DE LA ACTIVIDAD", "ACTIVITY DETAILS" } },
+            { "secReservas",        new[]{ "GESTIÓN DE RESERVAS", "BOOKINGS MANAGEMENT" } },
+            { "secDetallesReserva",  new[]{ "NUEVA / DETALLES DE RESERVA", "NEW / BOOKING DETAILS" } },
+            { "secPersonal",        new[]{ "GESTIÓN DE PERSONAL", "STAFF MANAGEMENT" } },
+            { "secDetallesEmpl",     new[]{ "DETALLES DE EMPLEADO", "EMPLOYEE DETAILS" } },
+            { "secCliente",         new[]{ "👤 CLIENTE", "👤 CLIENT" } },
+
+            // Filtros y búsquedas
+            { "lblFiltroTipo",      new[]{ "Filtrar por tipo:", "Filter by type:" } },
+            { "lblFiltroDia",       new[]{ "DÍA", "DAY" } },
+            { "lblBuscar",          new[]{ "Buscar...", "Search..." } },
+
+            // Botones específicos
+            { "btnAnadirAloj",      new[]{ "AÑADIR NUEVO ALOJAMIENTO", "ADD NEW ACCOMMODATION" } },
+            { "btnAnadirAct",       new[]{ "Nueva Actividad  +", "New Activity  +" } },
+            { "btnAnadirCliente",    new[]{ "AÑADIR NUEVO CLIENTE", "ADD NEW CLIENT" } },
+            { "btnAnadirEmpl",       new[]{ "Nuevo empleado  +", "New employee  +" } },
+            { "btnCambiarEstado",    new[]{ "CAMBIAR ESTADO", "CHANGE STATUS" } },
+            { "btnLimpiarRecinto",   new[]{ "SOLICITAR LIMPIEZA", "REQUEST CLEANING" } },
+            { "btnLimpiarFiltros",   new[]{ "Limpiar filtros", "Clear filters" } },
+            { "btnBaja",            new[]{ "DAR BAJA", "DEACTIVATE" } },
+
+            // Campos de formulario específicos
+            { "lblDni",            new[]{ "DNI:", "ID:" } },
+            { "lblTelefono",        new[]{ "Teléfono:", "Phone:" } },
+            { "lblEmail",           new[]{ "E-mail:", "E-mail:" } },
+            { "lblVehiculo",        new[]{ "Vehículo", "Vehicle" } },
+            { "lblPrecioNoche",      new[]{ "PRECIO NOCHE (€)", "PRICE PER NIGHT (€)" } },
+            { "lblCapMaxPersonas",    new[]{ "CAPAC. MÁX. PERSONAS", "MAX. CAPACITY" } },
+            { "lblPersonasAlojadas",  new[]{ "PERSONAS ALOJADAS", "LODGED PERSONS" } },
+
+            // Estados y valores
+            { "statReservado",      new[]{ "Reservado", "Reserved" } },
+            { "statOcupado",        new[]{ "Ocupado", "Occupied" } },
+            { "statLibre",          new[]{ "Libre", "Free" } },
+            { "statActivo",         new[]{ "Activo", "Active" } },
+            { "statInactivo",       new[]{ "Inactivo", "Inactive" } },
+
+            // Total de registros
+            { "lblTotal",           new[]{ "Total registro(s):", "Total record(s):" } },
+
+            // Mapa y leyenda
+            { "lblFree",            new[]{ "Libre", "Free" } },
+            { "lblOccupied",        new[]{ "Ocupado", "Occupied" } },
+            { "lblReserved",        new[]{ "Reservado", "Reserved" } },
         };
 
         public static string T(string clave)

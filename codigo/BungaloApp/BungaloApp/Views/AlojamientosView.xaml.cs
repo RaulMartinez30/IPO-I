@@ -37,6 +37,15 @@ namespace BungaloApp
             var sel = DataStore.Alojamientos.FirstOrDefault(a => a.Nombre == seleccion) ?? DataStore.Alojamientos.FirstOrDefault();
             if (sel != null) dgAloj.SelectedItem = sel;
             else NuevoFormulario();
+
+            // Suscribirse al evento de cambio de idioma
+            AppSettings.IdiomaChanged += (s, e) => ActualizarIdioma();
+        }
+
+        private void ActualizarIdioma()
+        {
+            ActualizarHeaders();
+            ActualizarTotales();
         }
 
         public void ActualizarHeaders()

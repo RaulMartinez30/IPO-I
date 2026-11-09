@@ -12,6 +12,9 @@ namespace BungaloApp
         {
             InitializeComponent();
             Cargar();
+
+            // Suscribirse al evento de cambio de idioma
+            AppSettings.IdiomaChanged += (s, e) => Cargar();
         }
 
         private void Cargar()

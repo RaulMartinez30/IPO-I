@@ -1,3 +1,4 @@
+using System;
 using System.Windows;
 using System.Windows.Media;
 using Microsoft.Win32;
@@ -7,11 +8,28 @@ namespace BungaloApp
     /// <summary>Ajustes de la aplicación (en memoria mientras la app está abierta).</summary>
     public static class AppSettings
     {
+        // Evento para escuchar cambios de idioma
+        public static event EventHandler IdiomaChanged;
+
+        private static string idioma = "ES";
+
         // General
         public static string Usuario = "Pascual Duarte";
         public static string Email = "pascualDuarte@esi.com";
         public static int CierreSesionMin = 15;
-        public static string Idioma = "ES";            // ES / EN
+
+        public static string Idioma
+        {
+            get { return idioma; }
+            set
+            {
+                if (idioma != value)
+                {
+                    idioma = value;
+                    IdiomaChanged?.Invoke(null, EventArgs.Empty);
+                }
+            }
+        }
 
         // Aspecto y accesibilidad
         public static string Tema = "Claro";           // Claro / Oscuro / Sistema
