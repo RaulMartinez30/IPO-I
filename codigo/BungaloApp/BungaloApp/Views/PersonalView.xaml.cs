@@ -21,8 +21,11 @@ namespace BungaloApp
         public PersonalView()
         {
             InitializeComponent();
+            Loaded += (s, e) => { AppSettings.IdiomaChanged -= OnIdioma; AppSettings.IdiomaChanged += OnIdioma; };
+            Unloaded += (s, e) => AppSettings.IdiomaChanged -= OnIdioma;
             cmbFiltroEstado.ItemsSource = new[] { "Todos", "Activo", "Baja" };
             cmbFiltroEstado.SelectedIndex = 0;
+            Loc.Combo(cmbFiltroEstado, true);
 
             vista = CollectionViewSource.GetDefaultView(DataStore.Empleados);
             vista.Filter = Filtrar;
@@ -31,6 +34,15 @@ namespace BungaloApp
 
             var primero = DataStore.Empleados.FirstOrDefault();
             if (primero != null) dgPersonal.SelectedItem = primero; else NuevoFormulario();
+            Loc.ApplyVisualTree(this);
+        }
+
+        private void OnIdioma(object sender, EventArgs e)
+        {
+            dgPersonal.Items.Refresh();
+            ActualizarTotal();
+            if (actual != null) btnBaja.Content = actual.Estado == "Baja" ? Loc.T("btnAlta") : Loc.T("btnBaja");
+            Loc.ApplyVisualTree(this);
         }
 
         private bool Filtrar(object o)
@@ -48,7 +60,7 @@ namespace BungaloApp
             if (vista != null) vista.Refresh();
         }
 
-        private void ActualizarTotal() { lblTotal.Text = "Personal total: " + DataStore.Empleados.Count; }
+        private void ActualizarTotal() { lblTotal.Text = Loc.F("totPersonal", DataStore.Empleados.Count); }
 
         private void dgPersonal_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -80,7 +92,7 @@ namespace BungaloApp
             txtTelefono.Text = emp.Telefono; txtEmail.Text = emp.Email;
             txtIdiomas.Text = emp.Idiomas; txtEspecialidad.Text = emp.Especialidad;
             txtFormacion.Text = emp.Formacion;
-            btnBaja.Content = emp.Estado == "Baja" ? "DAR DE ALTA" : "DAR BAJA";
+            btnBaja.Content = emp.Estado == "Baja" ? Loc.T("btnAlta") : Loc.T("btnBaja");
             MostrarFoto();
             cargando = false;
         }
@@ -104,7 +116,7 @@ namespace BungaloApp
 
         private void Foto_Click(object sender, RoutedEventArgs e)
         {
-            var dlg = new OpenFileDialog { Filter = "Imágenes|*.jpg;*.jpeg;*.png;*.bmp", Title = "Selecciona una foto" };
+            var dlg = new OpenFileDialog { Filter = Loc.T("fotoFiltro"), Title = Loc.T("fotoTitulo") };
             if (dlg.ShowDialog() == true)
             {
                 fotoTmp = dlg.FileName;
@@ -115,14 +127,14 @@ namespace BungaloApp
         private void Guardar_Click(object sender, RoutedEventArgs e)
         {
             string msg = null;
-            if (txtNombre.Text.Trim() == "" || txtApellidos.Text.Trim() == "") msg = "Nombre y apellidos son obligatorios.";
-            else if (!Regex.IsMatch(txtTelefono.Text.Trim(), @"^\d{9}$")) msg = "El teléfono debe tener 9 dígitos.";
-            else if (!Regex.IsMatch(txtEmail.Text.Trim(), @"^[^@\s]+@[^@\s]+\.[^@\s]+$")) msg = "El e-mail no es válido.";
-            else if (txtIdiomas.Text.Trim() == "") msg = "Indica al menos un idioma.";
+            if (txtNombre.Text.Trim() == "" || txtApellidos.Text.Trim() == "") msg = Loc.T("vPersNombre");
+            else if (!Regex.IsMatch(txtTelefono.Text.Trim(), @"^\d{9}$")) msg = Loc.T("vTel");
+            else if (!Regex.IsMatch(txtEmail.Text.Trim(), @"^[^@\s]+@[^@\s]+\.[^@\s]+$")) msg = Loc.T("vEmail");
+            else if (txtIdiomas.Text.Trim() == "") msg = Loc.T("vIdiomas");
 
             if (msg != null)
             {
-                MessageBox.Show(msg, "Datos no válidos", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show(msg, Loc.T("rawInvalidData"), MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
@@ -137,15 +149,15 @@ namespace BungaloApp
             dgPersonal.Items.Refresh();
             ActualizarTotal();
             dgPersonal.SelectedItem = emp;
-            MessageBox.Show("Empleado guardado correctamente.", "Bungalo APP", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show(Loc.T("persGuardado"), "Bungalo APP", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void Baja_Click(object sender, RoutedEventArgs e)
         {
             if (nuevo) { NuevoFormulario(); return; }
             bool baja = actual.Estado != "Baja";
-            string pregunta = baja ? "¿Dar de baja a " + actual.NombreCompleto + "?" : "¿Dar de alta a " + actual.NombreCompleto + "?";
-            if (MessageBox.Show(pregunta, "Confirmar", MessageBoxButton.YesNo, MessageBoxImage.Question) != MessageBoxResult.Yes) return;
+            string pregunta = Loc.F(baja ? "persBaja" : "persAlta", actual.NombreCompleto);
+            if (MessageBox.Show(pregunta, Loc.T("rawConfirm"), MessageBoxButton.YesNo, MessageBoxImage.Question) != MessageBoxResult.Yes) return;
 
             actual.Estado = baja ? "Baja" : "Activo";
             if (baja)
@@ -156,7 +168,7 @@ namespace BungaloApp
             }
             vista.Refresh();
             dgPersonal.Items.Refresh();
-            btnBaja.Content = baja ? "DAR DE ALTA" : "DAR BAJA";
+            btnBaja.Content = baja ? Loc.T("btnAlta") : Loc.T("btnBaja");
         }
 
         private void Cancelar_Click(object sender, RoutedEventArgs e)

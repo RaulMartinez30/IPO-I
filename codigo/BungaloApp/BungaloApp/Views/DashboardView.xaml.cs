@@ -14,7 +14,15 @@ namespace BungaloApp
             Cargar();
 
             // Suscribirse al evento de cambio de idioma
-            AppSettings.IdiomaChanged += (s, e) => Cargar();
+            Loaded += (s, e) => { AppSettings.IdiomaChanged -= OnIdioma; AppSettings.IdiomaChanged += OnIdioma; };
+            Unloaded += (s, e) => AppSettings.IdiomaChanged -= OnIdioma;
+            Loc.ApplyVisualTree(this);
+        }
+
+        private void OnIdioma(object sender, EventArgs e)
+        {
+            Cargar();
+            Loc.ApplyVisualTree(this);
         }
 
         private void Cargar()

@@ -19,6 +19,8 @@ namespace BungaloApp
         public LoginWindow()
         {
             InitializeComponent();
+            AppSettings.IdiomaChanged += ActualizarIdioma;
+            Closed += (s, e) => AppSettings.IdiomaChanged -= ActualizarIdioma;
 
             // Las inicializamos dentro del constructor
             try
@@ -34,6 +36,14 @@ namespace BungaloApp
                 // Si peta, te saltará este aviso y sabrás por qué no cargaba
                 MessageBox.Show("Fallo al cargar las imágenes del mono. Revisa las rutas.\nError: " + ex.Message, "Modo Debug", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+            Loc.ApplyVisualTree(this);
+        }
+
+        private void ActualizarIdioma(object sender, EventArgs e)
+        {
+            lblErrorUsuario.Text = Loc.T("rawRequiredUser");
+            lblErrorPassword.Text = Loc.T("rawRequiredPassword");
+            Loc.ApplyVisualTree(this);
         }
         
         // --- EVENTOS DEL MONO INTERACTIVO ---
@@ -123,7 +133,7 @@ namespace BungaloApp
 
             if (string.IsNullOrWhiteSpace(txtUsuario.Text))
             {
-                lblErrorUsuario.Text = "El campo de usuario no puede estar vacío";
+                lblErrorUsuario.Text = Loc.T("rawRequiredUser");
                 lblErrorUsuario.Visibility = Visibility.Visible;
                 txtUsuario.BorderBrush = Brushes.Red;
                 hayErrores = true;
@@ -131,7 +141,7 @@ namespace BungaloApp
 
             if (string.IsNullOrWhiteSpace(passwordActual))
             {
-                lblErrorPassword.Text = "La contraseña no puede estar vacía";
+                lblErrorPassword.Text = Loc.T("rawRequiredPassword");
                 lblErrorPassword.Visibility = Visibility.Visible;
                 txtPassword.BorderBrush = Brushes.Red;
                 txtPasswordVisible.BorderBrush = Brushes.Red;
@@ -148,7 +158,7 @@ namespace BungaloApp
             }
             else
             {
-                lblErrorUsuario.Text = "Usuario o contraseña incorrectos";
+                lblErrorUsuario.Text = Loc.T("rawInvalidLogin");
                 lblErrorUsuario.Visibility = Visibility.Visible;
                 txtUsuario.BorderBrush = Brushes.Red;
                 txtPassword.BorderBrush = Brushes.Red;

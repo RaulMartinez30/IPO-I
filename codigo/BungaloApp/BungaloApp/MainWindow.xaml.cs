@@ -108,6 +108,9 @@ namespace BungaloApp
             if (vista is ReservasView rv) rv.ActualizarHeaders();
             else if (vista is AlojamientosView av) av.ActualizarHeaders();
             else if (vista is ActividadesView acv) acv.ActualizarHeaders();
+
+            // Aplicar traducción visual a la vista cargada
+            Loc.ApplyVisualTree(vista);
         }
 
         private void lstNav_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -155,6 +158,7 @@ namespace BungaloApp
             ConstruirTextos();
             ConstruirNav();
             Navegar(actual);
+            Loc.ApplyVisualTree(this);
         }
 
         private void btnAyuda_Click(object sender, RoutedEventArgs e)
@@ -187,7 +191,7 @@ namespace BungaloApp
             if ((DateTime.Now - ultimaActividad).TotalMinutes >= AppSettings.CierreSesionMin)
             {
                 timer.Stop();
-                MessageBox.Show("Sesión cerrada por inactividad.", "Bungalo APP", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show(Loc.T("msgInactividad"), "Bungalo APP", MessageBoxButton.OK, MessageBoxImage.Information);
                 VolverALogin();
             }
         }

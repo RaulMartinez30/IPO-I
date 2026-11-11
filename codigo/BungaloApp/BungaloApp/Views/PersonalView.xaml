@@ -29,7 +29,7 @@
                         <DataGridTextColumn Header="EMPLEADO" Binding="{Binding NombreCompleto}" Width="*"/>
                         <DataGridTextColumn Header="CONTACTO" Binding="{Binding Contacto}" Width="Auto"/>
                         <DataGridTextColumn Header="IDIOMAS" Binding="{Binding Idiomas}" Width="Auto"/>
-                        <DataGridTextColumn Header="ESPECIALIDAD" Binding="{Binding Especialidad}" Width="*"/>
+                        <DataGridTextColumn Header="ESPECIALIDAD" Binding="{Binding EspecialidadLoc}" Width="*"/>
                         <DataGridTemplateColumn Header="ESTADO" Width="Auto">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>

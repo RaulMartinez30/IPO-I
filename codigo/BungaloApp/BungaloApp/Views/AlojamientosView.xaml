@@ -22,8 +22,8 @@
                 <DataGrid x:Name="dgAloj" SelectionChanged="dgAloj_SelectionChanged" MouseDoubleClick="dgAloj_MouseDoubleClick">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="NOMBRE" Binding="{Binding Nombre}" Width="Auto"/>
-                        <DataGridTextColumn Header="TIPO" Binding="{Binding Tipo}" Width="*"/>
-                        <DataGridTextColumn Header="ESTADO" Binding="{Binding Estado}" Width="*"/>
+                        <DataGridTextColumn Header="TIPO" Binding="{Binding TipoLoc}" Width="*"/>
+                        <DataGridTextColumn Header="ESTADO" Binding="{Binding EstadoLoc}" Width="*"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </DockPanel>

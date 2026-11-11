@@ -26,7 +26,8 @@ namespace BungaloApp
 
         public string IdCliente { get { return Id + " - " + Cliente; } }
         public string FechaEntradaTxt { get { return FechaEntrada.ToString("dd/MM/yy"); } }
-        public string Aviso { get { return Estado == "Eliminada" ? "(Desaparece en 2 días)" : ""; } }
+        public string Aviso { get { return Estado == "Eliminada" ? Loc.Translate("(Desaparece en 2 días)") : ""; } }
+        public string EstadoLoc { get { return Loc.Translate(Estado); } }
     }
 
     public class Alojamiento
@@ -49,17 +50,20 @@ namespace BungaloApp
         public bool Tv { get; set; }
         public bool Mascotas { get; set; }
 
+        public string TipoLoc { get { return Loc.Translate(Tipo); } }
+        public string EstadoLoc { get { return Loc.Translate(Estado); } }
+
         public string EquipamientoTxt
         {
             get
             {
                 var l = new System.Collections.Generic.List<string>();
-                if (Wifi) l.Add("Wi-Fi");
-                if (Aire) l.Add("A/C");
-                if (Lavadora) l.Add("Lavadora");
-                if (Tv) l.Add("TV");
-                if (Mascotas) l.Add("Admite mascotas");
-                return l.Count == 0 ? "Sin equipamiento" : string.Join(" · ", l);
+                if (Wifi) l.Add(Loc.Translate("Wi-Fi"));
+                if (Aire) l.Add(Loc.Translate("A/C"));
+                if (Lavadora) l.Add(Loc.Translate("Lavadora"));
+                if (Tv) l.Add(Loc.Translate("TV"));
+                if (Mascotas) l.Add(Loc.Translate("Admite mascotas"));
+                return l.Count == 0 ? Loc.Translate("Sin equipamiento") : string.Join(" · ", l);
             }
         }
     }
@@ -90,8 +94,10 @@ namespace BungaloApp
         public bool SinMonitor { get { return string.IsNullOrWhiteSpace(Monitor) || Monitor == "Sin asignar"; } }
         public string FechaTxt { get { return Fecha.ToString("dd/MM/yy"); } }
         public string DiaHora { get { return Fecha.ToString("dd/MM/yyyy") + " " + Hora; } }
-        public string MonitorTxt { get { return SinMonitor ? "(Sin asignar)" : "(" + Monitor + ")"; } }
-        public string Plazas { get { return Inscritos + "/" + CupoMax + (Inscritos >= CupoMax ? " (Lleno)" : ""); } }
+        public string MonitorTxt { get { return SinMonitor ? "(" + Loc.Translate("Sin asignar") + ")" : "(" + Monitor + ")"; } }
+        public string MonitorLoc { get { return SinMonitor ? Loc.Translate("Sin asignar") : Monitor; } }
+        public string NombreLoc { get { return Loc.Translate(Nombre); } }
+        public string Plazas { get { return Inscritos + "/" + CupoMax + (Inscritos >= CupoMax ? " " + Loc.Translate("(Lleno)") : ""); } }
 
         public string EstadoIcono
         {
@@ -128,7 +134,8 @@ namespace BungaloApp
 
         public string NombreCompleto { get { return Nombre + " " + Apellidos; } }
         public string Contacto { get { return Telefono + "\n" + Email; } }
-        public string EstadoTxt { get { return "● " + Estado; } }
+        public string EstadoTxt { get { return "● " + Loc.TranslateEmp(Estado); } }
+        public string EspecialidadLoc { get { return Loc.Translate(Especialidad); } }
         public string EstadoColor { get { return Estado == "Activo" ? "#2E9E4F" : "#D32F2F"; } }
         public string Iniciales
         {

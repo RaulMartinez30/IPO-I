@@ -28,6 +28,9 @@ namespace BungaloApp
             cmbFiltroTipo.SelectedIndex = 0;
             cmbTipo.ItemsSource = new[] { "Bungalow", "Cabaña", "Parcela" };
             cmbTemporada.ItemsSource = new[] { "Alta", "Media", "Baja" };
+            Loc.Combo(cmbFiltroTipo);
+            Loc.Combo(cmbTipo);
+            Loc.Combo(cmbTemporada);
 
             vista = CollectionViewSource.GetDefaultView(DataStore.Alojamientos);
             vista.Filter = Filtrar;
@@ -38,14 +41,20 @@ namespace BungaloApp
             if (sel != null) dgAloj.SelectedItem = sel;
             else NuevoFormulario();
 
-            // Suscribirse al evento de cambio de idioma
-            AppSettings.IdiomaChanged += (s, e) => ActualizarIdioma();
+            Loaded += (s, e) => { AppSettings.IdiomaChanged -= OnIdioma; AppSettings.IdiomaChanged += OnIdioma; };
+            Unloaded += (s, e) => AppSettings.IdiomaChanged -= OnIdioma;
+            Loc.ApplyVisualTree(this);
         }
+
+        private void OnIdioma(object sender, EventArgs e) { ActualizarIdioma(); }
 
         private void ActualizarIdioma()
         {
+            dgAloj.Items.Refresh();
             ActualizarHeaders();
             ActualizarTotales();
+            ActualizarEstadoUI();
+            Loc.ApplyVisualTree(this);
         }
 
         public void ActualizarHeaders()
@@ -72,8 +81,8 @@ namespace BungaloApp
 
         private void ActualizarTotales()
         {
-            lblTotales.Text = "Alojamientos totales: " + DataStore.Alojamientos.Count +
-                              " | disponibles: " + DataStore.Alojamientos.Count(a => a.Estado == "Disponible");
+            lblTotales.Text = Loc.F("totalAlojamientos", DataStore.Alojamientos.Count,
+                DataStore.Alojamientos.Count(a => a.Estado == "Disponible"));
         }
 
         private void dgAloj_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -124,8 +133,8 @@ namespace BungaloApp
 
         private void ActualizarEstadoUI()
         {
-            lblEstado.Text = "ESTADO: " + estadoTmp;
-            lblLimpio.Text = "LIMPIO: " + (limpioTmp ? "Limpio" : "Sucio");
+            lblEstado.Text = Loc.T("estado") + ": " + Loc.Translate(estadoTmp);
+            lblLimpio.Text = Loc.T("limpio") + ": " + Loc.T(limpioTmp ? "rawClean" : "rawDirty");
         }
 
         private void ActualizarImagen()
@@ -145,7 +154,7 @@ namespace BungaloApp
             foreach (string s in Estados)
             {
                 string estado = s;
-                var mi = new MenuItem { Header = estado, IsChecked = estado == estadoTmp };
+                var mi = new MenuItem { Header = Loc.Translate(estado), IsChecked = estado == estadoTmp };
                 mi.Click += (o, a) => { estadoTmp = estado; ActualizarEstadoUI(); };
                 menu.Items.Add(mi);
             }
@@ -157,7 +166,7 @@ namespace BungaloApp
             estadoTmp = "Esp. Limpieza";
             limpioTmp = false;
             ActualizarEstadoUI();
-            MessageBox.Show("Limpieza solicitada. Pulsa GUARDAR para confirmar el cambio.", "Bungalo APP",
+            MessageBox.Show(Loc.T("alojLimpiezaMsg"), "Bungalo APP",
                 MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
@@ -167,18 +176,18 @@ namespace BungaloApp
             string nombre = txtNombre.Text.Trim();
             string msg = null;
 
-            if (nombre == "") msg = "El nombre es obligatorio.";
-            else if (DataStore.Alojamientos.Any(x => x != actual && x.Nombre.Equals(nombre, StringComparison.OrdinalIgnoreCase))) msg = "Ya existe un alojamiento con ese nombre.";
-            else if (cmbTipo.SelectedItem == null) msg = "Selecciona un tipo.";
-            else if (!int.TryParse(txtCap.Text, out cap) || cap <= 0) msg = "La capacidad máxima debe ser un número mayor que 0.";
-            else if (!int.TryParse(txtPers.Text, out pers) || pers < 0 || pers > int.Parse(txtCap.Text)) msg = "Las personas alojadas deben estar entre 0 y la capacidad máxima.";
-            else if (!decimal.TryParse(txtPrecio.Text.Replace("€", "").Trim(), NumberStyles.Number, CultureInfo.CurrentCulture, out precio) || precio < 0) msg = "El precio no es válido.";
-            else if (!int.TryParse(txtM2.Text, out m2) || m2 <= 0) msg = "El tamaño debe ser un número mayor que 0.";
-            else if (cmbTemporada.SelectedItem == null) msg = "Selecciona la temporada.";
+            if (nombre == "") msg = Loc.T("vNombre");
+            else if (DataStore.Alojamientos.Any(x => x != actual && x.Nombre.Equals(nombre, StringComparison.OrdinalIgnoreCase))) msg = Loc.T("vAlojDup");
+            else if (cmbTipo.SelectedItem == null) msg = Loc.T("vAlojTipo");
+            else if (!int.TryParse(txtCap.Text, out cap) || cap <= 0) msg = Loc.T("vAlojCap");
+            else if (!int.TryParse(txtPers.Text, out pers) || pers < 0 || pers > int.Parse(txtCap.Text)) msg = Loc.T("vAlojPers");
+            else if (!decimal.TryParse(txtPrecio.Text.Replace("€", "").Trim(), NumberStyles.Number, CultureInfo.CurrentCulture, out precio) || precio < 0) msg = Loc.T("vPrecio");
+            else if (!int.TryParse(txtM2.Text, out m2) || m2 <= 0) msg = Loc.T("vAlojTam");
+            else if (cmbTemporada.SelectedItem == null) msg = Loc.T("vAlojTemp");
 
             if (msg != null)
             {
-                MessageBox.Show(msg, "Datos no válidos", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show(msg, Loc.T("rawInvalidData"), MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
@@ -204,7 +213,7 @@ namespace BungaloApp
             dgAloj.Items.Refresh();
             ActualizarTotales();
             dgAloj.SelectedItem = a;
-            MessageBox.Show("Alojamiento guardado correctamente.", "Bungalo APP", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show(Loc.T("alojGuardado"), "Bungalo APP", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void Eliminar_Click(object sender, RoutedEventArgs e)
@@ -212,10 +221,10 @@ namespace BungaloApp
             if (nuevo) { NuevoFormulario(); return; }
             if (DataStore.Reservas.Any(r => r.Alojamiento == actual.Nombre && r.Estado != "Eliminada" && r.Estado != "Cancelada"))
             {
-                MessageBox.Show("No se puede eliminar: tiene reservas activas asociadas.", "Bungalo APP", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show(Loc.T("alojNoElim"), "Bungalo APP", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
-            if (MessageBox.Show("¿Eliminar el alojamiento " + actual.Nombre + "?", "Confirmar", MessageBoxButton.YesNo, MessageBoxImage.Warning) != MessageBoxResult.Yes) return;
+            if (MessageBox.Show(Loc.F("alojElim", actual.Nombre), Loc.T("rawConfirm"), MessageBoxButton.YesNo, MessageBoxImage.Warning) != MessageBoxResult.Yes) return;
             DataStore.Alojamientos.Remove(actual);
             ActualizarTotales();
             dgAloj.SelectedItem = null;

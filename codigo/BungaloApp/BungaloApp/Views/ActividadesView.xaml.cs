@@ -18,8 +18,12 @@ namespace BungaloApp
         public ActividadesView()
         {
             InitializeComponent();
+            Loc.Combo(cmbFiltroTipo);
+            Loc.Combo(cmbMonitor);
+            Loaded += (s, e) => { AppSettings.IdiomaChanged -= OnIdioma; AppSettings.IdiomaChanged += OnIdioma; };
+            Unloaded += (s, e) => AppSettings.IdiomaChanged -= OnIdioma;
 
-            cmbUbicacion.ItemsSource = new[] { "Zona Norte - Lago", "Zona Sur", "Piscina", "Pistas deportivas", "Sala Multiusos", "Recepción" };
+            CargarUbicaciones();
             RecargarMonitores();
             RecargarTipos();
 
@@ -33,6 +37,27 @@ namespace BungaloApp
 
             var primera = DataStore.Actividades.OrderBy(a => a.Fecha).ThenBy(a => a.Hora).FirstOrDefault();
             if (primera != null) dgAct.SelectedItem = primera; else NuevoFormulario();
+            Loc.ApplyVisualTree(this);
+        }
+
+        private static readonly string[] ubicaciones = { "Zona Norte - Lago", "Zona Sur", "Piscina", "Pistas deportivas", "Sala Multiusos", "Recepción" };
+
+        private void OnIdioma(object sender, EventArgs e)
+        {
+            dgAct.Items.Refresh();
+            ActualizarHeaders();
+            ActualizarTotal();
+            MostrarInscritos();
+            CargarUbicaciones();
+            Loc.ApplyVisualTree(this);
+        }
+
+        // Combo editable: se muestran los nombres traducidos y se guarda siempre el valor en español
+        private void CargarUbicaciones()
+        {
+            string es = Loc.ToEs(cmbUbicacion.Text);
+            cmbUbicacion.ItemsSource = ubicaciones.Select(u => Loc.Translate(u)).ToList();
+            cmbUbicacion.Text = Loc.Translate(es);
         }
 
         public void ActualizarHeaders()
@@ -87,7 +112,13 @@ namespace BungaloApp
             txtFiltroMonitor.Text = "";
         }
 
-        private void ActualizarTotal() { lblTotal.Text = "Actividades totales: " + DataStore.Actividades.Count; }
+        private void ActualizarTotal() { lblTotal.Text = Loc.F("totActividades", DataStore.Actividades.Count); }
+
+        private void MostrarInscritos()
+        {
+            if (actual != null)
+                lblInscritos.Text = Loc.F("inscritos", actual.Inscritos, actual.InscAdultos, actual.InscNinos, actual.InscBebes);
+        }
 
         private void dgAct_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -124,8 +155,8 @@ namespace BungaloApp
             txtInicio.Text = a.Hora; txtFin.Text = a.HoraFin;
             chkAdultos.IsChecked = a.DestAdultos; chkNinos.IsChecked = a.DestNinos; chkBebes.IsChecked = a.DestBebes;
             txtMin.Text = a.CupoMin.ToString(); txtMax.Text = a.CupoMax.ToString();
-            cmbUbicacion.Text = a.Ubicacion;
-            lblInscritos.Text = a.Inscritos + "  (Adultos: " + a.InscAdultos + " · Niños: " + a.InscNinos + " · Bebés: " + a.InscBebes + ")";
+            cmbUbicacion.Text = Loc.Translate(a.Ubicacion);
+            MostrarInscritos();
             txtPrecioHora.Text = a.PrecioHora.ToString("0.##", CultureInfo.CurrentCulture);
             txtPrecioMes.Text = a.PrecioMes.ToString("0.##", CultureInfo.CurrentCulture);
             txtConsideraciones.Text = a.Consideraciones;
@@ -141,19 +172,19 @@ namespace BungaloApp
             NumberStyles ns = NumberStyles.Number;
             CultureInfo ci = CultureInfo.CurrentCulture;
 
-            if (txtNombre.Text.Trim() == "") msg = "El nombre de la actividad es obligatorio.";
-            else if (dpDia.SelectedDate == null) msg = "Selecciona el día.";
-            else if (!TimeSpan.TryParse(txtInicio.Text.Trim(), out ini) || !TimeSpan.TryParse(txtFin.Text.Trim(), out fin)) msg = "Las horas deben tener formato HH:mm.";
-            else if (TimeSpan.Parse(txtFin.Text.Trim()) <= TimeSpan.Parse(txtInicio.Text.Trim())) msg = "La hora de fin debe ser posterior a la de inicio.";
-            else if (chkAdultos.IsChecked != true && chkNinos.IsChecked != true && chkBebes.IsChecked != true) msg = "Selecciona al menos un destinatario.";
-            else if (!int.TryParse(txtMin.Text, out min) || !int.TryParse(txtMax.Text, out max) || min < 0 || max < 1 || min > max) msg = "El cupo debe cumplir 0 ≤ mínimo ≤ máximo.";
-            else if (!decimal.TryParse(txtPrecioHora.Text.Replace("€", "").Trim(), ns, ci, out ph) || ph < 0) msg = "El precio/hora no es válido.";
-            else if (!decimal.TryParse(txtPrecioMes.Text.Replace("€", "").Trim(), ns, ci, out pm) || pm < 0) msg = "El precio/mes no es válido.";
-            else if (cmbUbicacion.Text.Trim() == "") msg = "Indica la ubicación.";
+            if (txtNombre.Text.Trim() == "") msg = Loc.T("vActNombre");
+            else if (dpDia.SelectedDate == null) msg = Loc.T("vActDia");
+            else if (!TimeSpan.TryParse(txtInicio.Text.Trim(), out ini) || !TimeSpan.TryParse(txtFin.Text.Trim(), out fin)) msg = Loc.T("vHoras");
+            else if (TimeSpan.Parse(txtFin.Text.Trim()) <= TimeSpan.Parse(txtInicio.Text.Trim())) msg = Loc.T("vActFin");
+            else if (chkAdultos.IsChecked != true && chkNinos.IsChecked != true && chkBebes.IsChecked != true) msg = Loc.T("vActDest");
+            else if (!int.TryParse(txtMin.Text, out min) || !int.TryParse(txtMax.Text, out max) || min < 0 || max < 1 || min > max) msg = Loc.T("vActCupo");
+            else if (!decimal.TryParse(txtPrecioHora.Text.Replace("€", "").Trim(), ns, ci, out ph) || ph < 0) msg = Loc.T("vPrecioHora");
+            else if (!decimal.TryParse(txtPrecioMes.Text.Replace("€", "").Trim(), ns, ci, out pm) || pm < 0) msg = Loc.T("vPrecioMes");
+            else if (cmbUbicacion.Text.Trim() == "") msg = Loc.T("vActUbi");
 
             if (msg != null)
             {
-                MessageBox.Show(msg, "Datos no válidos", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show(msg, Loc.T("rawInvalidData"), MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
@@ -164,7 +195,7 @@ namespace BungaloApp
             a.Hora = txtInicio.Text.Trim(); a.HoraFin = txtFin.Text.Trim();
             a.DestAdultos = chkAdultos.IsChecked == true; a.DestNinos = chkNinos.IsChecked == true; a.DestBebes = chkBebes.IsChecked == true;
             a.CupoMin = int.Parse(txtMin.Text); a.CupoMax = int.Parse(txtMax.Text);
-            a.Ubicacion = cmbUbicacion.Text.Trim();
+            a.Ubicacion = Loc.ToEs(cmbUbicacion.Text.Trim());
             a.PrecioHora = decimal.Parse(txtPrecioHora.Text.Replace("€", "").Trim(), ns, ci);
             a.PrecioMes = decimal.Parse(txtPrecioMes.Text.Replace("€", "").Trim(), ns, ci);
             a.Consideraciones = txtConsideraciones.Text;
@@ -177,13 +208,13 @@ namespace BungaloApp
             RecargarTipos();
             ActualizarTotal();
             dgAct.SelectedItem = a;
-            MessageBox.Show("Actividad guardada correctamente.", "Bungalo APP", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show(Loc.T("actGuardada"), "Bungalo APP", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void Eliminar_Click(object sender, RoutedEventArgs e)
         {
             if (nuevo) { NuevoFormulario(); return; }
-            if (MessageBox.Show("¿Eliminar la actividad " + actual.Nombre + "?", "Confirmar", MessageBoxButton.YesNo, MessageBoxImage.Warning) != MessageBoxResult.Yes) return;
+            if (MessageBox.Show(Loc.F("actElim", actual.Nombre), Loc.T("rawConfirm"), MessageBoxButton.YesNo, MessageBoxImage.Warning) != MessageBoxResult.Yes) return;
             DataStore.Actividades.Remove(actual);
             ActualizarTotal();
             RecargarTipos();

@@ -60,7 +60,7 @@
                                     <DataGridTextColumn Header="FECHA ENTRADA" Binding="{Binding FechaEntradaTxt}" Width="Auto"/>
                                     <DataGridTextColumn Header="ID - CLIENTE" Binding="{Binding IdCliente}" Width="*"/>
                                     <DataGridTextColumn Header="ALOJAMIENTO" Binding="{Binding Alojamiento}" Width="Auto"/>
-                                    <DataGridTextColumn Header="ESTADO" Binding="{Binding Estado}" Width="Auto"/>
+                                    <DataGridTextColumn Header="ESTADO" Binding="{Binding EstadoLoc}" Width="Auto"/>
                                 </DataGrid.Columns>
                             </DataGrid>
                         </StackPanel>
@@ -72,7 +72,7 @@
                                 <DataGrid.Columns>
                                     <DataGridTextColumn Header="DÍA" Binding="{Binding FechaTxt}" Width="Auto"/>
                                     <DataGridTextColumn Header="HORA" Binding="{Binding Hora}" Width="Auto"/>
-                                    <DataGridTextColumn Header="ACTIVIDAD" Binding="{Binding Nombre}" Width="*"/>
+                                    <DataGridTextColumn Header="ACTIVIDAD" Binding="{Binding NombreLoc}" Width="*"/>
                                     <DataGridTextColumn Header="MONITOR" Binding="{Binding MonitorTxt}" Width="Auto"/>
                                 </DataGrid.Columns>
                             </DataGrid>

@@ -18,9 +18,10 @@ namespace BungaloApp
             InitializeComponent();
             FontSize = AppSettings.TamanoTexto;
             tabs.SelectedIndex = pestana;
+            AppSettings.IdiomaChanged += ConfiguracionWindow_IdiomaChanged;
+            Closed += (s, e) => AppSettings.IdiomaChanged -= ConfiguracionWindow_IdiomaChanged;
 
-            lblUsuario.Text = "Usuario actual: " + AppSettings.Usuario;
-            lblEmail.Text = "E-mail: " + AppSettings.Email;
+            ActualizarTextosIdioma();
 
             Llenar(cmbCierre, new[] { "5 mins", "10 mins", "15 mins", "30 mins", "60 mins" }, AppSettings.CierreSesionMin + " mins");
             Llenar(cmbDaltonico, new[] { "Desactivado", "Protanopia", "Deuteranopia", "Tritanopia" }, AppSettings.ModoDaltonico);
@@ -49,11 +50,26 @@ namespace BungaloApp
             chkNEmerg.IsChecked = AppSettings.NotifEmergentes;
             chkNSonido.IsChecked = AppSettings.SonidoImportantes;
             chkSilencio.IsChecked = AppSettings.ModoSilencio;
+            Loc.ApplyVisualTree(this);
+        }
+
+        private void ConfiguracionWindow_IdiomaChanged(object sender, EventArgs e)
+        {
+            Title = Loc.T("rawConfigTitle");
+            ActualizarTextosIdioma();
+            Loc.ApplyVisualTree(this);
+        }
+
+        private void ActualizarTextosIdioma()
+        {
+            lblUsuario.Text = Loc.T("rawCurrentUser") + " " + AppSettings.Usuario;
+            lblEmail.Text = Loc.T("rawEmailLabel") + " " + AppSettings.Email;
         }
 
         private static void Llenar(ComboBox c, string[] items, string seleccion)
         {
             c.ItemsSource = items;
+            Loc.Combo(c);
             c.SelectedItem = Array.IndexOf(items, seleccion) >= 0 ? seleccion : items[0];
         }
 
@@ -107,21 +123,21 @@ namespace BungaloApp
 
         private void CambiarPass_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Pendiente de implementar: aquí irá el diálogo para cambiar la contraseña.", "Bungalo APP",
+            MessageBox.Show(Loc.T("msgCambiarPass"), "Bungalo APP",
                 MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void Atajos_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Atajos disponibles:\n\nCtrl+1  Panel de Control\nCtrl+2  Reservas\nCtrl+3  Alojamientos\nCtrl+4  Actividades\nCtrl+5  Personal",
-                "Atajos de teclado", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show(Loc.T("msgAtajos"),
+                Loc.T("msgAtajosTitulo"), MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void Probar_Click(object sender, RoutedEventArgs e)
         {
             if (chkSilencio.IsChecked == true)
             {
-                MessageBox.Show("El modo silencio está activado.", "Bungalo APP", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show(Loc.T("msgSilencio"), "Bungalo APP", MessageBoxButton.OK, MessageBoxImage.Information);
                 return;
             }
             switch ((string)cmbSonido.SelectedItem)
@@ -135,25 +151,25 @@ namespace BungaloApp
         private void Abrir(string url)
         {
             try { Process.Start(url); }
-            catch { MessageBox.Show("No se pudo abrir: " + url); }
+            catch { MessageBox.Show(Loc.T("msgNoAbrir") + url); }
         }
 
         private void Docs_Click(object sender, RoutedEventArgs e) { Abrir("https://github.com/RaulMartinez30/IPO-I"); }
 
         private void Soporte_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Soporte técnico: soporte@bungalo.example (dirección de ejemplo)", "Bungalo APP",
+            MessageBox.Show(Loc.T("msgSoporte"), "Bungalo APP",
                 MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void Terminos_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Términos del servicio (pendiente de redactar).", "Bungalo APP", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show(Loc.T("msgTerminos"), "Bungalo APP", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void Privacidad_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Política de privacidad (pendiente de redactar).", "Bungalo APP", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show(Loc.T("msgPrivacidad"), "Bungalo APP", MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 }

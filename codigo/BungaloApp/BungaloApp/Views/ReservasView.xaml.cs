@@ -20,9 +20,12 @@ namespace BungaloApp
         public ReservasView()
         {
             InitializeComponent();
+            Loaded += (s, e) => { AppSettings.IdiomaChanged -= OnIdioma; AppSettings.IdiomaChanged += OnIdioma; };
+            Unloaded += (s, e) => AppSettings.IdiomaChanged -= OnIdioma;
 
             cmbFiltroEstado.ItemsSource = new[] { "Todos", "Confirmada", "Pendiente", "Eliminada", "Cancelada" };
             cmbFiltroEstado.SelectedIndex = 0;
+            Loc.Combo(cmbFiltroEstado);
             cmbAloj.ItemsSource = DataStore.Alojamientos.Select(a => a.Nombre).ToList();
 
             vista = CollectionViewSource.GetDefaultView(DataStore.Reservas);
@@ -30,6 +33,23 @@ namespace BungaloApp
             dgReservas.ItemsSource = vista;
             ActualizarTotal();
             NuevoFormulario();
+            Loc.ApplyVisualTree(this);
+        }
+
+        private void OnIdioma(object sender, EventArgs e)
+        {
+            dgReservas.Items.Refresh();
+            ActualizarHeaders();
+            ActualizarTotal();
+            ActualizarOcupantes();
+            var a = AlojSeleccionado();
+            if (a != null)
+            {
+                lblEstadoAloj.Text = Loc.T("estado") + ": " + Loc.Translate(a.Estado);
+                lblLimpioAloj.Text = Loc.T("limpio") + ": " + Loc.T(a.Limpio ? "rawClean" : "rawDirty");
+            }
+            ActualizarRecordatorio();
+            Loc.ApplyVisualTree(this);
         }
 
         public void ActualizarHeaders()
@@ -66,7 +86,7 @@ namespace BungaloApp
 
         private void ActualizarTotal()
         {
-            lblTotal.Text = "Reservas totales: " + DataStore.Reservas.Count;
+            lblTotal.Text = Loc.F("totReservas", DataStore.Reservas.Count);
         }
 
         private void dgReservas_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -131,7 +151,7 @@ namespace BungaloApp
         private void ActualizarOcupantes()
         {
             lblAd.Text = ad.ToString(); lblNi.Text = ni.ToString(); lblBe.Text = be.ToString();
-            btnOcupantes.Content = ad + " Adultos · " + ni + " Niños · " + be + " Bebés  ▾";
+            btnOcupantes.Content = Loc.F("ocupantes", ad, ni, be);
         }
 
         private void btnOcupantes_Click(object sender, RoutedEventArgs e) { popOcup.IsOpen = true; }
@@ -175,8 +195,8 @@ namespace BungaloApp
                 return;
             }
             lblEquip.Text = a.EquipamientoTxt;
-            lblEstadoAloj.Text = "ESTADO: " + a.Estado;
-            lblLimpioAloj.Text = "LIMPIO: " + (a.Limpio ? "Limpio" : "Sucio");
+            lblEstadoAloj.Text = Loc.T("estado") + ": " + Loc.Translate(a.Estado);
+            lblLimpioAloj.Text = Loc.T("limpio") + ": " + Loc.T(a.Limpio ? "rawClean" : "rawDirty");
             imgAloj.Source = Util.Img(a.Tipo == "Parcela" ? "parcela.jpg" : "bungalow.jpg");
             txtNotasAloj.Text = a.Notas;
         }
@@ -190,7 +210,7 @@ namespace BungaloApp
         private void ActualizarRecordatorio()
         {
             lblRecordatorio.Text = rbEliminada.IsChecked == true
-                ? "Recordatorio: la reserva de " + txtNombre.Text.ToUpper() + " se ELIMINARÁ en [2 DÍAS]"
+                ? Loc.F("recordatorio", txtNombre.Text.ToUpper())
                 : "";
         }
 
@@ -209,16 +229,16 @@ namespace BungaloApp
             TimeSpan t;
             decimal p;
             msg = null;
-            if (txtNombre.Text.Trim() == "") msg = "El nombre es obligatorio.";
-            else if (!Regex.IsMatch(txtDni.Text.Trim(), @"^\d{8}[A-Za-z]$")) msg = "El DNI debe tener 8 números y una letra.";
-            else if (!Regex.IsMatch(txtTelefono.Text.Trim(), @"^\d{9}$")) msg = "El teléfono debe tener 9 dígitos.";
-            else if (!Regex.IsMatch(txtEmail.Text.Trim(), @"^[^@\s]+@[^@\s]+\.[^@\s]+$")) msg = "El e-mail no es válido.";
-            else if (chkVehiculo.IsChecked == true && txtMatricula.Text.Trim() == "") msg = "Indica la matrícula del vehículo.";
-            else if (AlojSeleccionado() == null) msg = "Selecciona un alojamiento.";
-            else if (dpEntrada.SelectedDate == null || dpSalida.SelectedDate == null) msg = "Indica las fechas de entrada y salida.";
-            else if (dpSalida.SelectedDate < dpEntrada.SelectedDate) msg = "La fecha de salida no puede ser anterior a la de entrada.";
-            else if (!TimeSpan.TryParse(txtHoraEntrada.Text.Trim(), out t) || !TimeSpan.TryParse(txtHoraSalida.Text.Trim(), out t)) msg = "Las horas deben tener formato HH:mm.";
-            else if (!decimal.TryParse(txtPrecio.Text.Replace("€", "").Trim(), NumberStyles.Number, CultureInfo.CurrentCulture, out p) || p < 0) msg = "El precio no es válido.";
+            if (txtNombre.Text.Trim() == "") msg = Loc.T("vNombre");
+            else if (!Regex.IsMatch(txtDni.Text.Trim(), @"^\d{8}[A-Za-z]$")) msg = Loc.T("vDni");
+            else if (!Regex.IsMatch(txtTelefono.Text.Trim(), @"^\d{9}$")) msg = Loc.T("vTel");
+            else if (!Regex.IsMatch(txtEmail.Text.Trim(), @"^[^@\s]+@[^@\s]+\.[^@\s]+$")) msg = Loc.T("vEmail");
+            else if (chkVehiculo.IsChecked == true && txtMatricula.Text.Trim() == "") msg = Loc.T("vMatricula");
+            else if (AlojSeleccionado() == null) msg = Loc.T("vAloj");
+            else if (dpEntrada.SelectedDate == null || dpSalida.SelectedDate == null) msg = Loc.T("vFechas");
+            else if (dpSalida.SelectedDate < dpEntrada.SelectedDate) msg = Loc.T("vFechaOrden");
+            else if (!TimeSpan.TryParse(txtHoraEntrada.Text.Trim(), out t) || !TimeSpan.TryParse(txtHoraSalida.Text.Trim(), out t)) msg = Loc.T("vHoras");
+            else if (!decimal.TryParse(txtPrecio.Text.Replace("€", "").Trim(), NumberStyles.Number, CultureInfo.CurrentCulture, out p) || p < 0) msg = Loc.T("vPrecio");
             return msg == null;
         }
 
@@ -227,7 +247,7 @@ namespace BungaloApp
             string msg;
             if (!Validar(out msg))
             {
-                MessageBox.Show(msg, "Datos no válidos", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show(msg, Loc.T("rawInvalidData"), MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
             var r = actual;
@@ -256,13 +276,13 @@ namespace BungaloApp
             dgReservas.Items.Refresh();
             ActualizarTotal();
             dgReservas.SelectedItem = r;
-            MessageBox.Show("Reserva guardada correctamente.", "Bungalo APP", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show(Loc.T("resGuardada"), "Bungalo APP", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void Eliminar_Click(object sender, RoutedEventArgs e)
         {
             if (nuevo) { NuevoFormulario(); return; }
-            if (MessageBox.Show("¿Eliminar la reserva de " + actual.Cliente + " del listado?", "Confirmar",
+            if (MessageBox.Show(Loc.F("resElim", actual.Cliente), Loc.T("rawConfirm"),
                 MessageBoxButton.YesNo, MessageBoxImage.Warning) != MessageBoxResult.Yes) return;
             DataStore.Reservas.Remove(actual);
             ActualizarTotal();

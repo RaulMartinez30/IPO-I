@@ -20,11 +20,26 @@ namespace BungaloApp
         public GraficasWindow()
         {
             InitializeComponent();
+            AppSettings.IdiomaChanged += ActualizarIdioma;
+            Closed += (s, e) => AppSettings.IdiomaChanged -= ActualizarIdioma;
             DateTime h = DateTime.Today;
             dias = new[] { h.AddDays(-2).ToString("dd/MM"), h.AddDays(-1).ToString("dd/MM"), h.ToString("dd/MM") };
             lblRango.Text = h.AddDays(-2).ToString("dd/MM/yyyy") + " - " + h.ToString("dd/MM/yyyy");
-            cmbMetrica.ItemsSource = new[] { "NÚMERO DE ENTRADAS", "PARCELAS LIBRES", "OCUPACIÓN (%)", "PERSONAL ACTIVO" };
+            ActualizarIdioma(null, EventArgs.Empty);
             cmbMetrica.SelectedIndex = 0;
+        }
+
+        private void ActualizarIdioma(object sender, EventArgs e)
+        {
+            Title = Loc.T("chartTitle");
+            int idx = cmbMetrica.SelectedIndex;
+            cmbMetrica.ItemsSource = new[] { Loc.T("metricEntries"), Loc.T("metricFree"), Loc.T("metricOccupancy"), Loc.T("metricStaff") };
+            cmbMetrica.SelectedIndex = idx;
+            rbLineas.Content = Loc.T("chartLines");
+            rbBarras.Content = Loc.T("chartBars");
+            rbCirculo.Content = Loc.T("chartCircle");
+            Loc.ApplyVisualTree(this);
+            if (lienzo != null && cmbMetrica.SelectedIndex >= 0) Dibujar();
         }
 
         private void Cambio(object sender, RoutedEventArgs e)

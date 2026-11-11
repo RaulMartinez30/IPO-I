@@ -32,7 +32,7 @@
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <StackPanel Margin="4,2">
-                                        <TextBlock Text="{Binding Estado}"/>
+                                        <TextBlock Text="{Binding EstadoLoc}"/>
                                         <TextBlock Text="{Binding Aviso}" Foreground="#D32F2F" FontSize="10"/>
                                     </StackPanel>
                                 </DataTemplate>
