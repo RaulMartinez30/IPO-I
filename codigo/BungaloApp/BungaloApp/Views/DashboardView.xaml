@@ -37,14 +37,16 @@
                     <StackPanel>
                         <TextBlock x:Name="lblMapa" Style="{StaticResource H2}"/>
                         <TextBlock x:Name="lblMapaTitulo" FontWeight="SemiBold" FontSize="12"/>
-                        <Image x:Name="imgMapa" Height="320" Stretch="Uniform" Cursor="Hand" Margin="0,6" MouseLeftButtonUp="imgMapa_Click" ToolTip="Haz clic para ver detalles de ocupación"/>
+                        <Border x:Name="hostMapa" Height="340" Margin="0,6" BorderBrush="{DynamicResource LineBrush}" BorderThickness="1" ClipToBounds="True"/>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                             <Rectangle Width="14" Height="14" Fill="#4CAF50" Stroke="Black" Margin="4"/>
                             <TextBlock x:Name="lblLibre" VerticalAlignment="Center" Margin="0,0,14,0"/>
                             <Rectangle Width="14" Height="14" Fill="#E53935" Stroke="Black" Margin="4"/>
                             <TextBlock x:Name="lblOcupado" VerticalAlignment="Center" Margin="0,0,14,0"/>
                             <Rectangle Width="14" Height="14" Fill="#FDD835" Stroke="Black" Margin="4"/>
-                            <TextBlock x:Name="lblReservado" VerticalAlignment="Center"/>
+                            <TextBlock x:Name="lblReservado" VerticalAlignment="Center" Margin="0,0,14,0"/>
+                            <Rectangle Width="14" Height="14" Fill="#757575" Stroke="Black" Margin="4"/>
+                            <TextBlock x:Name="lblNoDisp" VerticalAlignment="Center"/>
                         </StackPanel>
                         <TextBlock x:Name="lblPistaMapa" FontSize="11" Foreground="{DynamicResource MutedBrush}" HorizontalAlignment="Center" Margin="0,6,0,0"/>
                     </StackPanel>

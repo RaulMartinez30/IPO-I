@@ -3,21 +3,21 @@
   "WorkspaceRootPath": "C:\\Users\\silvi\\OneDrive\\Desktop\\3\u00BA\\IPO-I\\codigo\\BungaloApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|c:\\users\\silvi\\onedrive\\desktop\\3\u00BA\\ipo-i\\codigo\\bungaloapp\\bungaloapp\\data\\loc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|solutionrelative:bungaloapp\\data\\loc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\silvi\\.copilot\\plans\\plan-rehacer-la-localizacin-completa-sin-bloqueos.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|MarkdownSecurePreview"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\silvi\\.copilot\\plans\\plan-completar-la-localizacin-esen-de-bungaloapp.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|MarkdownSecurePreview"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{254AFEB7-0329-AF49-FB51-15B2E337EB20}|Elementos de la soluci\u00F3n{254AFEB7-0329-AF49-FB51-15B2E337EB20}|C:\\Users\\silvi\\Downloads\\MapaControl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|C:\\Users\\silvi\\OneDrive\\Desktop\\3\u00BA\\IPO-I\\codigo\\BungaloApp\\bungaloapp\\views\\dashboardview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|solutionrelative:bungaloapp\\views\\dashboardview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\silvi\\.copilot\\plans\\plan-traducir-todo-el-frontend-que-ve-el-usuario.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|MarkdownSecurePreview"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\silvi\\.copilot\\plans\\plan-rehacer-la-localizacin-completa-sin-bloqueos.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|MarkdownSecurePreview"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\silvi\\.copilot\\plans\\plan-completar-la-localizacin-esen-de-bungaloapp.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|MarkdownSecurePreview"
+      "AbsoluteMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|C:\\Users\\silvi\\OneDrive\\Desktop\\3\u00BA\\IPO-I\\codigo\\BungaloApp\\bungaloapp\\data\\loc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|solutionrelative:bungaloapp\\data\\loc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|C:\\Users\\silvi\\OneDrive\\Desktop\\3\u00BA\\IPO-I\\codigo\\BungaloApp\\bungaloapp\\configuracionwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -87,34 +87,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "plan-rehacer-la-localizacin-completa-sin-bloqueos.md [Versi\u00F3n preliminar]",
+              "DocumentMoniker": "C:\\Users\\silvi\\.copilot\\plans\\plan-rehacer-la-localizacin-completa-sin-bloqueos.md",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\.copilot\\plans\\plan-rehacer-la-localizacin-completa-sin-bloqueos.md",
+              "ToolTip": "C:\\Users\\silvi\\.copilot\\plans\\plan-rehacer-la-localizacin-completa-sin-bloqueos.md [Versi\u00F3n preliminar]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\.copilot\\plans\\plan-rehacer-la-localizacin-completa-sin-bloqueos.md [Versi\u00F3n preliminar]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-11-17T12:53:18.735Z",
+              "EditorCaption": " [Versi\u00F3n preliminar]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "plan-completar-la-localizacin-esen-de-bungaloapp.md [Versi\u00F3n preliminar]",
               "DocumentMoniker": "C:\\Users\\silvi\\.copilot\\plans\\plan-completar-la-localizacin-esen-de-bungaloapp.md",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\.copilot\\plans\\plan-completar-la-localizacin-esen-de-bungaloapp.md",
               "ToolTip": "C:\\Users\\silvi\\.copilot\\plans\\plan-completar-la-localizacin-esen-de-bungaloapp.md [Versi\u00F3n preliminar]",
               "RelativeToolTip": "..\\..\\..\\..\\..\\..\\.copilot\\plans\\plan-completar-la-localizacin-esen-de-bungaloapp.md [Versi\u00F3n preliminar]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2026-11-10T16:30:01.716Z",
+              "WhenOpened": "2026-11-17T12:53:18.432Z",
               "EditorCaption": " [Versi\u00F3n preliminar]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DashboardView.xaml",
-              "DocumentMoniker": "C:\\Users\\silvi\\OneDrive\\Desktop\\3\u00BA\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Views\\DashboardView.xaml",
-              "RelativeDocumentMoniker": "BungaloApp\\Views\\DashboardView.xaml",
-              "ToolTip": "C:\\Users\\silvi\\OneDrive\\Desktop\\3\u00BA\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Views\\DashboardView.xaml",
-              "RelativeToolTip": "BungaloApp\\Views\\DashboardView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-11-09T18:57:16.189Z"
+              "DocumentIndex": 2,
+              "Title": "MapaControl.cs",
+              "DocumentMoniker": "C:\\Users\\silvi\\Downloads\\MapaControl.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Downloads\\MapaControl.cs",
+              "ToolTip": "C:\\Users\\silvi\\Downloads\\MapaControl.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Downloads\\MapaControl.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T20:00:57.316Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Loc.cs",
               "DocumentMoniker": "C:\\Users\\silvi\\OneDrive\\Desktop\\3\u00BA\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Data\\Loc.cs",
               "RelativeDocumentMoniker": "BungaloApp\\Data\\Loc.cs",
@@ -122,32 +135,18 @@
               "RelativeToolTip": "BungaloApp\\Data\\Loc.cs",
               "ViewState": "AgIAAEgCAAAAAAAAAAAcwFUCAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-09T18:10:18.231Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-09T18:10:18.231Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "plan-rehacer-la-localizacin-completa-sin-bloqueos.md [Versi\u00F3n preliminar]",
-              "DocumentMoniker": "C:\\Users\\silvi\\.copilot\\plans\\plan-rehacer-la-localizacin-completa-sin-bloqueos.md",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\.copilot\\plans\\plan-rehacer-la-localizacin-completa-sin-bloqueos.md",
-              "ToolTip": "C:\\Users\\silvi\\.copilot\\plans\\plan-rehacer-la-localizacin-completa-sin-bloqueos.md [Versi\u00F3n preliminar]",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\.copilot\\plans\\plan-rehacer-la-localizacin-completa-sin-bloqueos.md [Versi\u00F3n preliminar]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2026-11-10T16:30:04.404Z",
-              "EditorCaption": " [Versi\u00F3n preliminar]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "plan-traducir-todo-el-frontend-que-ve-el-usuario.md [Versi\u00F3n preliminar]",
-              "DocumentMoniker": "C:\\Users\\silvi\\.copilot\\plans\\plan-traducir-todo-el-frontend-que-ve-el-usuario.md",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\.copilot\\plans\\plan-traducir-todo-el-frontend-que-ve-el-usuario.md",
-              "ToolTip": "C:\\Users\\silvi\\.copilot\\plans\\plan-traducir-todo-el-frontend-que-ve-el-usuario.md [Versi\u00F3n preliminar]",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\.copilot\\plans\\plan-traducir-todo-el-frontend-que-ve-el-usuario.md [Versi\u00F3n preliminar]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2026-11-10T16:30:04.686Z",
-              "EditorCaption": " [Versi\u00F3n preliminar]"
+              "Title": "DashboardView.xaml",
+              "DocumentMoniker": "C:\\Users\\silvi\\OneDrive\\Desktop\\3\u00BA\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Views\\DashboardView.xaml",
+              "RelativeDocumentMoniker": "BungaloApp\\Views\\DashboardView.xaml",
+              "ToolTip": "C:\\Users\\silvi\\OneDrive\\Desktop\\3\u00BA\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Views\\DashboardView.xaml",
+              "RelativeToolTip": "BungaloApp\\Views\\DashboardView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-11-09T18:57:16.189Z"
             },
             {
               "$type": "Document",

@@ -19,6 +19,7 @@ namespace BungaloApp
         private bool cargando;
         private string estadoTmp = "Disponible";
         private bool limpioTmp = true;
+        private double latTmp, lngTmp;      // coordenadas en edición (0,0 = sin ubicar)
 
         public AlojamientosView(string seleccion = null)
         {
@@ -54,6 +55,7 @@ namespace BungaloApp
             ActualizarHeaders();
             ActualizarTotales();
             ActualizarEstadoUI();
+            ActualizarCoords();
             Loc.ApplyVisualTree(this);
         }
 
@@ -114,6 +116,8 @@ namespace BungaloApp
             nuevo = !DataStore.Alojamientos.Contains(a);
             estadoTmp = a.Estado;
             limpioTmp = a.Limpio;
+            latTmp = a.Lat;
+            lngTmp = a.Lng;
 
             txtNombre.Text = a.Nombre;
             cmbTipo.SelectedItem = a.Tipo;
@@ -128,6 +132,7 @@ namespace BungaloApp
             txtDesc.Text = a.Descripcion;
             ActualizarEstadoUI();
             ActualizarImagen();
+            ActualizarCoords();
             cargando = false;
         }
 
@@ -135,6 +140,33 @@ namespace BungaloApp
         {
             lblEstado.Text = Loc.T("estado") + ": " + Loc.Translate(estadoTmp);
             lblLimpio.Text = Loc.T("limpio") + ": " + Loc.T(limpioTmp ? "rawClean" : "rawDirty");
+        }
+
+        private void ActualizarCoords()
+        {
+            if (latTmp == 0 && lngTmp == 0)
+            {
+                lblCoords.Text = Loc.T("mapSinUbicar");
+                lblCoords.Foreground = System.Windows.Media.Brushes.DarkOrange;
+            }
+            else
+            {
+                lblCoords.Text = latTmp.ToString("0.00000", CultureInfo.InvariantCulture) + ", " + lngTmp.ToString("0.00000", CultureInfo.InvariantCulture);
+                lblCoords.ClearValue(TextBlock.ForegroundProperty);
+            }
+        }
+
+        private void UbicarMapa_Click(object sender, RoutedEventArgs e)
+        {
+            bool tiene = !(latTmp == 0 && lngTmp == 0);
+            double lat, lng;
+            if (UbicacionWindow.Elegir(Window.GetWindow(this), tiene ? (double?)latTmp : null, tiene ? (double?)lngTmp : null,
+                                       nuevo ? null : actual.Nombre, out lat, out lng))
+            {
+                latTmp = lat;
+                lngTmp = lng;
+                ActualizarCoords();
+            }
         }
 
         private void ActualizarImagen()
@@ -207,6 +239,7 @@ namespace BungaloApp
             a.Wifi = chkWifi.IsChecked == true; a.Aire = chkAire.IsChecked == true; a.Lavadora = chkLav.IsChecked == true;
             a.Tv = chkTv.IsChecked == true; a.Mascotas = chkMasc.IsChecked == true;
             a.Ubicacion = txtUbicacion.Text; a.Descripcion = txtDesc.Text;
+            a.Lat = latTmp; a.Lng = lngTmp;
 
             if (nuevo) DataStore.Alojamientos.Add(a);
             vista.Refresh();

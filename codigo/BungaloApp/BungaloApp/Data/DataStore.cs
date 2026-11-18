@@ -30,6 +30,17 @@ namespace BungaloApp
             Alojamientos.Add(A("P207", "Parcela", "En limpieza", false, 6, 0, 50, 20, "Parcela cerca de la zona de restauración."));
             Alojamientos[1].Ubicacion = "Parcela ubicada cerca de la restauración";
 
+            // ---- Coordenadas de ejemplo (zona de Lagunas de Ruidera, Ciudad Real) ----
+            // Cambia lat0/lng0 por la ubicación real del camping; dx/dy son metros respecto a ese punto.
+            double lat0 = 38.9660, lng0 = -2.8700;
+            double[] dx = { -90, 140, -40, 20, 95, 170, -150, 60, -20, 210 };
+            double[] dy = { 80, 120, -60, 20, -90, 15, -20, 150, 110, -40 };
+            for (int i = 0; i < Alojamientos.Count && i < dx.Length; i++)
+            {
+                Alojamientos[i].Lat = lat0 + dy[i] / 111320.0;
+                Alojamientos[i].Lng = lng0 + dx[i] / (111320.0 * Math.Cos(lat0 * Math.PI / 180.0));
+            }
+
             // ---- Personal ----
             Empleados.Add(new Empleado { Id = 1001, Nombre = "Pedro", Apellidos = "Ruiz", Telefono = "654321098", Email = "pedro.ruiz@esi.com", Idiomas = "ES / EN", Especialidad = "Senderismo / BTT", Estado = "Activo", Formacion = "Grado en CCAFD, Técnico de Senderismo y Escalada, Cursos de Primeros Auxilios (DESA)." });
             Empleados.Add(new Empleado { Id = 1002, Nombre = "Laura", Apellidos = "García", Telefono = "612345678", Email = "laura.g@esi.com", Idiomas = "ES / EN / FR", Especialidad = "Senderismo / Escalada", Estado = "Activo", Formacion = "Técnico deportivo en media montaña." });

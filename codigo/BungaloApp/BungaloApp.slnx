@@ -1,3 +1,6 @@
 <Solution>
+  <Folder Name="/Elementos de la solución/">
+    <File Path="../../../../../../Downloads/MapaControl.cs" />
+  </Folder>
   <Project Path="BungaloApp/BungaloApp.csproj" Id="ed6c14f4-4741-42bf-8ab0-325cef9c5390" />
 </Solution>

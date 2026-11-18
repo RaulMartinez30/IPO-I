@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\silvi\\OneDrive\\Desktop\\3\u00BA\\IPO-I\\codigo\\BungaloApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|c:\\users\\silvi\\onedrive\\desktop\\3\u00BA\\ipo-i\\codigo\\bungaloapp\\bungaloapp\\data\\loc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|solutionrelative:bungaloapp\\data\\loc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|C:\\Users\\silvi\\OneDrive\\Desktop\\3\u00BA\\IPO-I\\codigo\\BungaloApp\\bungaloapp\\views\\dashboardview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|solutionrelative:bungaloapp\\views\\dashboardview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\silvi\\.copilot\\plans\\plan-traducir-todo-el-frontend-que-ve-el-usuario.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|MarkdownSecurePreview"
     },
     {
@@ -18,6 +10,17 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\silvi\\.copilot\\plans\\plan-completar-la-localizacin-esen-de-bungaloapp.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|MarkdownSecurePreview"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{254AFEB7-0329-AF49-FB51-15B2E337EB20}|Elementos de la soluci\u00F3n{254AFEB7-0329-AF49-FB51-15B2E337EB20}|C:\\Users\\silvi\\Downloads\\MapaControl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|C:\\Users\\silvi\\OneDrive\\Desktop\\3\u00BA\\IPO-I\\codigo\\BungaloApp\\bungaloapp\\views\\dashboardview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|solutionrelative:bungaloapp\\views\\dashboardview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|C:\\Users\\silvi\\OneDrive\\Desktop\\3\u00BA\\IPO-I\\codigo\\BungaloApp\\bungaloapp\\data\\loc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|solutionrelative:bungaloapp\\data\\loc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ED6C14F4-4741-42BF-8AB0-325CEF9C5390}|BungaloApp\\BungaloApp.csproj|C:\\Users\\silvi\\OneDrive\\Desktop\\3\u00BA\\IPO-I\\codigo\\BungaloApp\\bungaloapp\\configuracionwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -87,23 +90,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
+              "Title": "plan-rehacer-la-localizacin-completa-sin-bloqueos.md [Versi\u00F3n preliminar]",
+              "DocumentMoniker": "C:\\Users\\silvi\\.copilot\\plans\\plan-rehacer-la-localizacin-completa-sin-bloqueos.md",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\.copilot\\plans\\plan-rehacer-la-localizacin-completa-sin-bloqueos.md",
+              "ToolTip": "C:\\Users\\silvi\\.copilot\\plans\\plan-rehacer-la-localizacin-completa-sin-bloqueos.md [Versi\u00F3n preliminar]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\.copilot\\plans\\plan-rehacer-la-localizacin-completa-sin-bloqueos.md [Versi\u00F3n preliminar]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-11-17T12:53:18.735Z",
+              "EditorCaption": " [Versi\u00F3n preliminar]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "plan-traducir-todo-el-frontend-que-ve-el-usuario.md [Versi\u00F3n preliminar]",
+              "DocumentMoniker": "C:\\Users\\silvi\\.copilot\\plans\\plan-traducir-todo-el-frontend-que-ve-el-usuario.md",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\.copilot\\plans\\plan-traducir-todo-el-frontend-que-ve-el-usuario.md",
+              "ToolTip": "C:\\Users\\silvi\\.copilot\\plans\\plan-traducir-todo-el-frontend-que-ve-el-usuario.md [Versi\u00F3n preliminar]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\.copilot\\plans\\plan-traducir-todo-el-frontend-que-ve-el-usuario.md [Versi\u00F3n preliminar]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-11-17T12:53:18.853Z",
+              "EditorCaption": " [Versi\u00F3n preliminar]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "plan-completar-la-localizacin-esen-de-bungaloapp.md [Versi\u00F3n preliminar]",
               "DocumentMoniker": "C:\\Users\\silvi\\.copilot\\plans\\plan-completar-la-localizacin-esen-de-bungaloapp.md",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\.copilot\\plans\\plan-completar-la-localizacin-esen-de-bungaloapp.md",
               "ToolTip": "C:\\Users\\silvi\\.copilot\\plans\\plan-completar-la-localizacin-esen-de-bungaloapp.md [Versi\u00F3n preliminar]",
               "RelativeToolTip": "..\\..\\..\\..\\..\\..\\.copilot\\plans\\plan-completar-la-localizacin-esen-de-bungaloapp.md [Versi\u00F3n preliminar]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2026-11-10T16:30:01.716Z",
+              "WhenOpened": "2026-11-17T12:53:18.432Z",
               "EditorCaption": " [Versi\u00F3n preliminar]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "MapaControl.cs",
+              "DocumentMoniker": "C:\\Users\\silvi\\Downloads\\MapaControl.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Downloads\\MapaControl.cs",
+              "ToolTip": "C:\\Users\\silvi\\Downloads\\MapaControl.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Downloads\\MapaControl.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-16T20:00:57.316Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Loc.cs",
+              "DocumentMoniker": "C:\\Users\\silvi\\OneDrive\\Desktop\\3\u00BA\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Data\\Loc.cs",
+              "RelativeDocumentMoniker": "BungaloApp\\Data\\Loc.cs",
+              "ToolTip": "C:\\Users\\silvi\\OneDrive\\Desktop\\3\u00BA\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Data\\Loc.cs",
+              "RelativeToolTip": "BungaloApp\\Data\\Loc.cs",
+              "ViewState": "AgIAAEgCAAAAAAAAAAAcwFUCAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-09T18:10:18.231Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "DashboardView.xaml",
               "DocumentMoniker": "C:\\Users\\silvi\\OneDrive\\Desktop\\3\u00BA\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Views\\DashboardView.xaml",
               "RelativeDocumentMoniker": "BungaloApp\\Views\\DashboardView.xaml",
@@ -114,44 +165,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Loc.cs",
-              "DocumentMoniker": "C:\\Users\\silvi\\OneDrive\\Desktop\\3\u00BA\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Data\\Loc.cs",
-              "RelativeDocumentMoniker": "BungaloApp\\Data\\Loc.cs",
-              "ToolTip": "C:\\Users\\silvi\\OneDrive\\Desktop\\3\u00BA\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Data\\Loc.cs",
-              "RelativeToolTip": "BungaloApp\\Data\\Loc.cs",
-              "ViewState": "AgIAAEgCAAAAAAAAAAAcwFUCAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-09T18:10:18.231Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "plan-rehacer-la-localizacin-completa-sin-bloqueos.md [Versi\u00F3n preliminar]",
-              "DocumentMoniker": "C:\\Users\\silvi\\.copilot\\plans\\plan-rehacer-la-localizacin-completa-sin-bloqueos.md",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\.copilot\\plans\\plan-rehacer-la-localizacin-completa-sin-bloqueos.md",
-              "ToolTip": "C:\\Users\\silvi\\.copilot\\plans\\plan-rehacer-la-localizacin-completa-sin-bloqueos.md [Versi\u00F3n preliminar]",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\.copilot\\plans\\plan-rehacer-la-localizacin-completa-sin-bloqueos.md [Versi\u00F3n preliminar]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2026-11-10T16:30:04.404Z",
-              "EditorCaption": " [Versi\u00F3n preliminar]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "plan-traducir-todo-el-frontend-que-ve-el-usuario.md [Versi\u00F3n preliminar]",
-              "DocumentMoniker": "C:\\Users\\silvi\\.copilot\\plans\\plan-traducir-todo-el-frontend-que-ve-el-usuario.md",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\.copilot\\plans\\plan-traducir-todo-el-frontend-que-ve-el-usuario.md",
-              "ToolTip": "C:\\Users\\silvi\\.copilot\\plans\\plan-traducir-todo-el-frontend-que-ve-el-usuario.md [Versi\u00F3n preliminar]",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\.copilot\\plans\\plan-traducir-todo-el-frontend-que-ve-el-usuario.md [Versi\u00F3n preliminar]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2026-11-10T16:30:04.686Z",
-              "EditorCaption": " [Versi\u00F3n preliminar]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "LoginWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\silvi\\OneDrive\\Desktop\\3\u00BA\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\LoginWindow.xaml.cs",
               "RelativeDocumentMoniker": "BungaloApp\\LoginWindow.xaml.cs",
@@ -163,7 +177,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ConfiguracionWindow.xaml",
               "DocumentMoniker": "C:\\Users\\silvi\\OneDrive\\Desktop\\3\u00BA\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\ConfiguracionWindow.xaml",
               "RelativeDocumentMoniker": "BungaloApp\\ConfiguracionWindow.xaml",
@@ -174,7 +188,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "PersonalView.xaml",
               "DocumentMoniker": "C:\\Users\\silvi\\OneDrive\\Desktop\\3\u00BA\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Views\\PersonalView.xaml",
               "RelativeDocumentMoniker": "BungaloApp\\Views\\PersonalView.xaml",
@@ -185,7 +199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "ActividadesView.xaml",
               "DocumentMoniker": "C:\\Users\\silvi\\OneDrive\\Desktop\\3\u00BA\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Views\\ActividadesView.xaml",
               "RelativeDocumentMoniker": "BungaloApp\\Views\\ActividadesView.xaml",
@@ -196,7 +210,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "AlojamientosView.xaml",
               "DocumentMoniker": "C:\\Users\\silvi\\OneDrive\\Desktop\\3\u00BA\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Views\\AlojamientosView.xaml",
               "RelativeDocumentMoniker": "BungaloApp\\Views\\AlojamientosView.xaml",
@@ -207,7 +221,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "ReservasView.xaml",
               "DocumentMoniker": "C:\\Users\\silvi\\OneDrive\\Desktop\\3\u00BA\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Views\\ReservasView.xaml",
               "RelativeDocumentMoniker": "BungaloApp\\Views\\ReservasView.xaml",
@@ -218,7 +232,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "PersonalView.xaml.cs",
               "DocumentMoniker": "C:\\Users\\silvi\\OneDrive\\Desktop\\3\u00BA\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Views\\PersonalView.xaml.cs",
               "RelativeDocumentMoniker": "BungaloApp\\Views\\PersonalView.xaml.cs",
@@ -230,7 +244,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "GraficasWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\silvi\\OneDrive\\Desktop\\3\u00BA\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\GraficasWindow.xaml.cs",
               "RelativeDocumentMoniker": "BungaloApp\\GraficasWindow.xaml.cs",
@@ -242,7 +256,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "DashboardView.xaml.cs",
               "DocumentMoniker": "C:\\Users\\silvi\\OneDrive\\Desktop\\3\u00BA\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Views\\DashboardView.xaml.cs",
               "RelativeDocumentMoniker": "BungaloApp\\Views\\DashboardView.xaml.cs",
@@ -254,7 +268,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "ConfiguracionWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\silvi\\OneDrive\\Desktop\\3\u00BA\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\ConfiguracionWindow.xaml.cs",
               "RelativeDocumentMoniker": "BungaloApp\\ConfiguracionWindow.xaml.cs",
@@ -266,7 +280,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "ActividadesView.xaml.cs",
               "DocumentMoniker": "C:\\Users\\silvi\\OneDrive\\Desktop\\3\u00BA\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Views\\ActividadesView.xaml.cs",
               "RelativeDocumentMoniker": "BungaloApp\\Views\\ActividadesView.xaml.cs",
@@ -278,7 +292,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "AlojamientosView.xaml.cs",
               "DocumentMoniker": "C:\\Users\\silvi\\OneDrive\\Desktop\\3\u00BA\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Views\\AlojamientosView.xaml.cs",
               "RelativeDocumentMoniker": "BungaloApp\\Views\\AlojamientosView.xaml.cs",
@@ -290,7 +304,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "ReservasView.xaml.cs",
               "DocumentMoniker": "C:\\Users\\silvi\\OneDrive\\Desktop\\3\u00BA\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Views\\ReservasView.xaml.cs",
               "RelativeDocumentMoniker": "BungaloApp\\Views\\ReservasView.xaml.cs",
@@ -302,7 +316,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\silvi\\OneDrive\\Desktop\\3\u00BA\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "BungaloApp\\MainWindow.xaml.cs",
@@ -314,7 +328,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "AppSettings.cs",
               "DocumentMoniker": "C:\\Users\\silvi\\OneDrive\\Desktop\\3\u00BA\\IPO-I\\codigo\\BungaloApp\\BungaloApp\\Data\\AppSettings.cs",
               "RelativeDocumentMoniker": "BungaloApp\\Data\\AppSettings.cs",

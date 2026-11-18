@@ -49,6 +49,8 @@ namespace BungaloApp
         public bool Lavadora { get; set; }
         public bool Tv { get; set; }
         public bool Mascotas { get; set; }
+        public double Lat { get; set; }             // latitud  (0 = sin ubicar)
+        public double Lng { get; set; }             // longitud (0 = sin ubicar)
 
         public string TipoLoc { get { return Loc.Translate(Tipo); } }
         public string EstadoLoc { get { return Loc.Translate(Estado); } }

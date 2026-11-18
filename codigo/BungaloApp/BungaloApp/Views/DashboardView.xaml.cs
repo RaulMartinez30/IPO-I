@@ -8,9 +8,13 @@ namespace BungaloApp
 {
     public partial class DashboardView : UserControl
     {
+        private readonly MapaControl mapa = new MapaControl();
+
         public DashboardView()
         {
             InitializeComponent();
+            mapa.Abrir += AbrirAlojamiento;
+            hostMapa.Child = mapa;
             Cargar();
 
             // Suscribirse al evento de cambio de idioma
@@ -22,7 +26,14 @@ namespace BungaloApp
         private void OnIdioma(object sender, EventArgs e)
         {
             Cargar();
+            mapa.Actualizar();
             Loc.ApplyVisualTree(this);
+        }
+
+        private void AbrirAlojamiento(string nombre)
+        {
+            var w = Window.GetWindow(this) as MainWindow;
+            if (w != null) w.Navegar("alojamientos", nombre);
         }
 
         private void Cargar()
@@ -33,10 +44,10 @@ namespace BungaloApp
             lblLibre.Text = Loc.T("libre");
             lblOcupado.Text = Loc.T("ocupado");
             lblReservado.Text = Loc.T("reservado");
-            lblPistaMapa.Text = Loc.T("pistaMapa");
+            lblPistaMapa.Text = Loc.T("mapaPista");
             lblProxAct.Text = Loc.T("proxAct");
             btnGraficas.Content = Loc.T("graficas");
-            imgMapa.Source = Util.Img("mapa.jpg");
+            lblNoDisp.Text = Loc.T("mapNoDisp");
 
             // Actualizar headers de DataGrid de forma segura
             if (dgReservas.Columns.Count >= 4)

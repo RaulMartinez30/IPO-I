@@ -64,3 +64,14 @@ C:\Users\silvi\OneDrive\Desktop\3º\IPO-I\codigo\BungaloApp\BungaloApp\obj\Debug
 C:\Users\silvi\OneDrive\Desktop\3º\IPO-I\codigo\BungaloApp\BungaloApp\obj\Debug\BungaloApp.csproj.CoreCompileInputs.cache
 C:\Users\silvi\OneDrive\Desktop\3º\IPO-I\codigo\BungaloApp\BungaloApp\obj\Debug\BungaloApp.exe
 C:\Users\silvi\OneDrive\Desktop\3º\IPO-I\codigo\BungaloApp\BungaloApp\obj\Debug\BungaloApp.pdb
+C:\Users\silvi\OneDrive\Desktop\3º\IPO-I\codigo\BungaloApp\BungaloApp\obj\Debug\BungaloApp_Content.g.cs
+C:\Users\silvi\OneDrive\Desktop\3º\IPO-I\codigo\BungaloApp\BungaloApp\bin\Debug\runtimes\win-x86\native\WebView2Loader.dll
+C:\Users\silvi\OneDrive\Desktop\3º\IPO-I\codigo\BungaloApp\BungaloApp\bin\Debug\runtimes\win-x64\native\WebView2Loader.dll
+C:\Users\silvi\OneDrive\Desktop\3º\IPO-I\codigo\BungaloApp\BungaloApp\bin\Debug\runtimes\win-arm64\native\WebView2Loader.dll
+C:\Users\silvi\OneDrive\Desktop\3º\IPO-I\codigo\BungaloApp\BungaloApp\bin\Debug\Microsoft.Web.WebView2.Core.dll
+C:\Users\silvi\OneDrive\Desktop\3º\IPO-I\codigo\BungaloApp\BungaloApp\bin\Debug\Microsoft.Web.WebView2.WinForms.dll
+C:\Users\silvi\OneDrive\Desktop\3º\IPO-I\codigo\BungaloApp\BungaloApp\bin\Debug\Microsoft.Web.WebView2.Wpf.dll
+C:\Users\silvi\OneDrive\Desktop\3º\IPO-I\codigo\BungaloApp\BungaloApp\bin\Debug\Microsoft.Web.WebView2.Core.xml
+C:\Users\silvi\OneDrive\Desktop\3º\IPO-I\codigo\BungaloApp\BungaloApp\bin\Debug\Microsoft.Web.WebView2.WinForms.xml
+C:\Users\silvi\OneDrive\Desktop\3º\IPO-I\codigo\BungaloApp\BungaloApp\bin\Debug\Microsoft.Web.WebView2.Wpf.xml
+C:\Users\silvi\OneDrive\Desktop\3º\IPO-I\codigo\BungaloApp\BungaloApp\obj\Debug\BungaloApp.csproj.Up2Date

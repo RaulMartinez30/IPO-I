@@ -406,6 +406,27 @@ namespace BungaloApp
             { "resGuardada",      new[]{ "Reserva guardada correctamente.", "Booking saved successfully." } },
             { "resElim",          new[]{ "¿Eliminar la reserva de {0} del listado?", "Delete {0}'s booking from the list?" } },
             { "recordatorio",     new[]{ "Recordatorio: la reserva de {0} se ELIMINARÁ en [2 DÍAS]", "Reminder: {0}'s booking will be DELETED in [2 DAYS]" } },
+
+            // ---- Mapa interactivo ----
+            { "mapTipo",          new[]{ "Tipo", "Type" } },
+            { "mapCapacidad",     new[]{ "Ocupación", "Occupancy" } },
+            { "mapPrecio",        new[]{ "Precio/noche", "Price/night" } },
+            { "mapCliente",       new[]{ "Cliente", "Client" } },
+            { "mapVer",           new[]{ "Ver alojamiento", "View accommodation" } },
+            { "mapPlano",         new[]{ "Mapa", "Map" } },
+            { "mapSatelite",      new[]{ "Satélite", "Satellite" } },
+            { "mapCentrar",       new[]{ "Ver todo el recinto", "Show the whole site" } },
+            { "mapNoDisp",        new[]{ "No disponible", "Unavailable" } },
+            { "mapCargando",      new[]{ "Cargando mapa...", "Loading map..." } },
+            { "mapError",         new[]{ "No se pudo cargar el mapa. Comprueba la conexión a Internet y que WebView2 Runtime está instalado.", "The map could not be loaded. Check your Internet connection and that WebView2 Runtime is installed." } },
+            { "mapaPista",        new[]{ "Arrastra para moverte, usa la rueda para el zoom y pulsa un marcador para ver sus detalles.", "Drag to move, use the wheel to zoom and click a marker for details." } },
+            { "mapUbicarBtn",     new[]{ "📍 UBICAR EN EL MAPA", "📍 PLACE ON THE MAP" } },
+            { "mapUbicarTitulo",  new[]{ "Ubicar alojamiento", "Place accommodation" } },
+            { "mapUbicarAyuda",   new[]{ "Haz clic en el mapa para colocar el alojamiento. Puedes arrastrar el marcador para ajustarlo.", "Click on the map to place the accommodation. You can drag the marker to fine-tune it." } },
+            { "mapCoords",        new[]{ "Coordenadas: {0}, {1}", "Coordinates: {0}, {1}" } },
+            { "mapSinUbicar",     new[]{ "⚠ Sin ubicar: no aparecerá en el mapa", "⚠ Not placed: it will not appear on the map" } },
+            { "mapOk",            new[]{ "Aceptar", "Accept" } },
+            { "mapCancel",        new[]{ "Cancelar", "Cancel" } },
         };
 
         public static string T(string clave)

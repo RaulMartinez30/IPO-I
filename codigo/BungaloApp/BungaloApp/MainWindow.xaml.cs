@@ -123,7 +123,9 @@ namespace BungaloApp
         private void MainWindow_PreviewKeyDown(object sender, KeyEventArgs e)
         {
             ultimaActividad = DateTime.Now;
-            if ((Keyboard.Modifiers & ModifierKeys.Control) == 0) return;
+            // Solo Ctrl+número. En teclados como el español, AltGr se detecta como Ctrl+Alt
+            // y escribir @ (AltGr+2), # (AltGr+3)... cambiaba de pestaña sin querer.
+            if (Keyboard.Modifiers != ModifierKeys.Control) return;
             switch (e.Key)
             {
                 case Key.D1: Navegar("panel"); e.Handled = true; break;
